@@ -1,0 +1,8 @@
+mouse
+keyboard
+computer
+outlook
+adobe
+banana
+apple
+pear

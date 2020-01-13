@@ -1,0 +1,43 @@
+session_config:
+  session_expiration_time: 60.0
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- problem
+- software_request
+- hardware_request
+entities:
+- problem_object
+- software_type
+- hardware_type
+slots:
+  hardware_type:
+    type: text
+  problem_object:
+    type: text
+  software_type:
+    type: text
+templates:
+  utter_greet:
+  - text: Hello AAFC Employee! I am t3h l33t chatb0tzzz I can currently help you if
+      you need any hardware/software and also if you are having any issues? What will
+      it be little human?
+  utter_ask_software:
+  - text: 'It appears you are requesting software (test: {software_type})! What software
+      were you looking for?'
+  utter_ask_hardware:
+  - text: 'It appears you are requesting hardware (test: {hardware_type})! What are
+      you looking for?'
+  utter_ask_problem:
+  - text: "It seems like you're having an issue (test: {problem_object}). What is your issue?"
+  utter_goodbye:
+  - text: Bye, thanks for coming to Riley's bot shop!
+actions:
+- utter_greet
+- utter_goodbye
+- utter_ask_software
+- utter_ask_hardware
+- utter_ask_problem
