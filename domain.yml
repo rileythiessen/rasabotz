@@ -1,43 +1,88 @@
 session_config:
   session_expiration_time: 60.0
-  carry_over_slots_to_new_session: true
+  carry_over_slots_to_new_session: false
 intents:
 - greet
 - goodbye
 - affirm
 - deny
-- problem
-- software_request
-- hardware_request
-entities:
-- problem_object
-- software_type
-- hardware_type
-slots:
-  hardware_type:
-    type: text
-  problem_object:
-    type: text
-  software_type:
-    type: text
+- problem_monitor
+- problem_keyboard
+- problem_outlook
+- problem_monitor_flicker
+- problem_keyboard_broken
+- need_analyst
+- ticket_creation
+- bot_capabilities
 templates:
   utter_greet:
-  - text: Hello AAFC Employee! I am t3h l33t chatb0tzzz I can currently help you if
-      you need any hardware/software and also if you are having any issues? What will
-      it be little human?
-  utter_ask_software:
-  - text: 'It appears you are requesting software (test: {software_type})! What software
-      were you looking for?'
-  utter_ask_hardware:
-  - text: 'It appears you are requesting hardware (test: {hardware_type})! What are
-      you looking for?'
-  utter_ask_problem:
-  - text: "It seems like you're having an issue (test: {problem_object}). What is your issue?"
+  - text: Hello AAFC Employee. I am a chatbot designed to help you I can currently
+      help with acquiring any hardware/software and also with any issues?
+    buttons:
+    - title: Issue
+      payload: /problem_monitor    
+  utter_monitor_question:
+  - text: You've identified a monitor issue. Is this correct?
+  utter_monitor_answer:
+  - text: I am very sorry to hear that. Can you please provide me with some additional
+      details regarding your monitor?
+  utter_monitor_flicker_confirm:
+  - text: You've identified a flickering monitor issue. Is this correct?
+  utter_monitor_flicker:
+  - text: Ah... The good old monitor flickering issue. This is a very common issue
+      and I'm sorry to hear you're experiencing this. Resolutions can be found at
+      http://monitorflickeringsucks.com
+  utter_keyboard_question:
+  - text: It appears you are having an issue with your keyboard. Is this correct?
+  utter_keyboard_answer:
+  - text: I am very sorry to hear that. Can you please provide me with some additional
+      details regarding your keyboard?
+  utter_keyboard_broken_confirm:
+  - text: You've identified an issue with a broken keyboard. Is this correct?
+  utter_keyboard_broken:
+  - text: Ah... It appears that your keyboard is just broken. Unfortunately as a bot
+      I cannot fix that issue.
+  utter_further_help:
+  - text: If I was not able to fully solve your issue today I can create a ticket
+      for you. Additionally, I can also assign an analyst directly to this chat to
+      help resolve your issue. What would you like to do? If you would like to restart
+      this chat please say bye.
+  utter_outlook_question:
+  - text: It appears you are having an issue with your outlook. Is this correct?
+  utter_outlook_answer:
+  - text: I am very sorry to hear that. Some common resolutions for Outlook issues
+      can be found over here at www.outlookhelpplzz.com
   utter_goodbye:
-  - text: Bye, thanks for coming to Riley's bot shop!
+  - text: Bye, thank you for coming to Riley's bot shop! Please greet me to start
+      this conversation again :)
+  utter_generic_deny:
+  - text: Oops! Please ask greet me again so we can restart this conversation, guess
+      I was wrong :(
+  utter_generic_ticket_question:
+  - text: Sorry that I wasn't able to fully solve your issue today :(.
+  utter_ticket_reply:
+  - text: It appears that you wanted me to create a ticket for you. Your ticket has
+      been created and the details will be emailed to you shortly. For any further
+      assistance please greet me again.
+  utter_analyst_reply:
+  - text: It appears that you would like me to connect you to an analyst. An analyst
+      will be with you shortly. (ETA coming) For any further bot assistance please
+      greet me again.
 actions:
 - utter_greet
 - utter_goodbye
-- utter_ask_software
-- utter_ask_hardware
-- utter_ask_problem
+- utter_monitor_question
+- utter_monitor_answer
+- utter_keyboard_question
+- utter_keyboard_answer
+- utter_outlook_question
+- utter_outlook_answer
+- utter_generic_deny
+- utter_monitor_flicker
+- utter_monitor_flicker_confirm
+- utter_keyboard_broken
+- utter_keyboard_broken_confirm
+- utter_generic_ticket_question
+- utter_ticket_reply
+- utter_analyst_reply
+- utter_further_help
