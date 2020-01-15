@@ -34,19 +34,15 @@ intents:
 - problem_phone_password
 - problem_phone_broken
 - issue_not_listed
-- problem_office
-- problem_office_word
-- problem_office_powerpoint
-- problem_office_excel
-- problem_adobe
-- problem_adobe_acrobat
-- problem_adobe_creative
-- problem_adobe_illustrator
 - problem_mouse
 - problem_mouse_broken
 - problem_sound
 - problem_sound_nwork
 - problem_sound_hw
+- problem_word
+- problem_word_generalerrors
+- problem_powerpoint
+- problem_powerpoint_generalerrors
 
 templates:
   utter_greet:
@@ -330,85 +326,7 @@ templates:
     - title: Yes
       payload: /affirm
     - title: No
-      payload: /deny
-  utter_office_question:
-  - text: It appears that you are having a office issue. Is this correct?
-    buttons:
-    - title: Yes
-      payload: /affirm
-    - title: No
-      payload: /deny
-  utter_office_options:
-  - text: Please select the issue you are having from the list below.
-    buttons:
-    - title: Microsoft Word
-      payload: /problem_office_word
-    - title: Microsoft Powerpoint
-      payload: /problem_office_powerpoint
-    - title: Microsoft Excel
-      payload: /problem_office_excel
-    - title: My Issue Is Not Listed
-      payload: /issue_not_listed
-  utter_office_word:
-  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/officeword. Did this resolve your issue?
-    buttons:
-    - title: Yes
-      payload: /affirm
-    - title: No
-      payload: /deny
-  utter_office_powerpoint:
-  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/officepowerpoint. Did this resolve your issue?
-    buttons:
-    - title: Yes
-      payload: /affirm
-    - title: No
-      payload: /deny
-  utter_office_excel:
-  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/officeexcel. Did this resolve your issue?
-    buttons:
-    - title: Yes
-      payload: /affirm
-    - title: No
-      payload: /deny
-  utter_adobe_question:
-  - text: It appears that you are having an issue with one of the adobe products. Is this correct?
-    buttons:
-    - title: Yes
-      payload: /affirm
-    - title: No
-      payload: /deny
-  utter_adobe_options:
-  - text: Please select the program you are having issues with from the list below.
-    buttons:
-    - title: Adobe Acrobat
-      payload: /problem_adobe_acrobat
-    - title: Adobe Creative Suite
-      payload: /problem_adobe_creative
-    - title: Adobe Illustrator
-      payload: /problem_adobe_illustrator
-    - title: My Issue Is Not Listed
-      payload: /issue_not_listed
-  utter_adobe_acrobat:
-  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/adobeacrobat. Did this resolve your issue?
-    buttons:
-    - title: Yes
-      payload: /affirm
-    - title: No
-      payload: /deny
-  utter_adobe_creative:
-  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/adobecreative. Did this resolve your issue?
-    buttons:
-    - title: Yes
-      payload: /affirm
-    - title: No
-      payload: /deny
-  utter_adobe_illustrator:
-  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/adobeillustrator. Did this resolve your issue?
-    buttons:
-    - title: Yes
-      payload: /affirm
-    - title: No
-      payload: /deny
+      payload: /deny  
   utter_mouse_question:
   - text: It appears that you are having a mouse issue. Is this correct?
     buttons:
@@ -448,6 +366,48 @@ templates:
       payload: /deny
   utter_sound_hw:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/soundhw. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_word_question:
+  - text: It appears that you are having a word issue. Is this correct?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_word_options:
+  - text: Please select the issue you are having from the list below.
+    buttons:
+    - title: General Word Issues
+      payload: /problem_word_generalerrors
+    - title: My Issue Is Not Listed
+      payload: /issue_not_listed
+  utter_word_generalerrors:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/wordgeneralerrors. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_powerpoint_question:
+  - text: It appears that you are having a powerpoint issue. Is this correct?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_powerpoint_options:
+  - text: Please select the issue you are having from the list below.
+    buttons:
+    - title: General Powerpoint Issues
+      payload: /problem_powerpoint_generalerrors
+    - title: My Issue Is Not Listed
+      payload: /issue_not_listed
+  utter_powerpoint_generalerrors:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/powerpointgeneralerrors. Did this resolve your issue?
     buttons:
     - title: Yes
       payload: /affirm
@@ -497,19 +457,15 @@ actions:
 - utter_phone_password
 - utter_phone_broken
 - utter_issue_not_found
-- utter_office_question
-- utter_office_options
-- utter_office_word
-- utter_office_powerpoint
-- utter_office_excel
-- utter_adobe_question
-- utter_adobe_options
-- utter_adobe_acrobat
-- utter_adobe_creative
-- utter_adobe_illustrator
 - utter_mouse_question
 - utter_mouse_options
 - utter_sound_question
 - utter_sound_options
 - utter_sound_nwork
 - utter_sound_hw
+- utter_word_question
+- utter_word_options
+- utter_word_generalerrors
+- utter_powerpoint_question
+- utter_powerpoint_options
+- utter_powerpoint_generalerrors

@@ -184,24 +184,7 @@
 ## intent:problem_outlook_wopen
 ## intent:problem_outlook_password
 
-## intent:problem_office
-- my powerpoint wont work
-- my powerpoint wont present
-- my word wont open
-- my word is in french
-- something is wrong with office
-- something is wrong with my word
-- something is wrong with my powerpoint
-- something is wrong with my spreadsheets
-- my excel wont work
-- my excel sucks
-- microsoft word wont work
-- microsoft worrd wont open my .doc files
-- microsoft excel is slow
 
-## intent:problem_office_word
-## intent:problem_office_powerpoint
-## intent:problem_office_excel
 
 ## intent:problem_phone
 - My phone isn't working
@@ -241,10 +224,6 @@
 ## intent:problem_phone_password
 ## intent:problem_phone_broken
 
-## intent:problem_adobe
-## intent:problem_adobe_acrobat
-## intent:problem_adobe_creative
-## intent:problem_adobe_illustrator
 
 ## intent:issue_not_listed
 

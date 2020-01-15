@@ -654,260 +654,6 @@
  - utter_generic_broken
  > broken_q
 
-## issue+office
-> issue_asked
-* problem_office
- - utter_office_question 
- > office_issue_asked
-
-## issue+office+deny
-> office_issue_asked
-* deny
- - utter_further_help
- > office_issue_ticket
-
-## issue+office+deny+affirm
-> office_issue_ticket
-* affirm
- - utter_ticket_created_reply
- - action_restart
-
-## issue+office+deny+deny
-> office_issue_ticket
-* deny
- - utter_call_it
- - action_restart
-
-## issue+office+affirm
-> office_issue_asked
-* affirm
- - utter_generic_apology
- - utter_office_options
- > specific_office_issue
-
-## issue+office+affirm+other
-> specific_office_issue
-* issue_not_listed
- - utter_issue_not_found
- > other_ticket
-
-## issue+office+word
-> specific_office_issue
-* problem_office_word
- - utter_office_word
- > office_word_fixed_q
-
-## issue+office+word+fixed
-> office_word_fixed_q
-* affirm
- - utter_goodbye
- - action_restart
-
-## issue+office+word+notfixed
-> office_word_fixed_q
-* deny
- - utter_ticket_reply
- > office_word_not_fixed
-
-## issue+office+word+notfixed+affirmanalyst
-> office_word_not_fixed
-* affirm
- - utter_analyst_reply
- - action_restart
-
-## issue+office+word+notfixed+denyanalyst
-> office_word_not_fixed
-* deny
- - utter_goodbye
- - action_restart
-
-## issue+office+powerpoint
-> specific_office_issue
-* problem_office_powerpoint
- - utter_office_powerpoint
- > office_powerpoint_fixed_q
-
-## issue+office+powerpoint+fixed
-> office_powerpoint_fixed_q
-* affirm
- - utter_goodbye
- - action_restart
-
-## issue+office+powerpoint+notfixed
-> office_powerpoint_fixed_q
-* deny
- - utter_ticket_reply
- > office_powerpoint_not_fixed
-
-## issue+office+powerpoint+notfixed+affirmanalyst
-> office_powerpoint_not_fixed
-* affirm
- - utter_analyst_reply
- - action_restart
-
-## issue+office+powerpoint+notfixed+denyanalyst
-> office_powerpoint_not_fixed
-* deny
- - utter_goodbye
- - action_restart
-
-## issue+office+excel
-> specific_office_issue
-* problem_office_excel
- - utter_office_excel
- > office_excel_fixed_q
-
-## issue+office+excel+fixed
-> office_excel_fixed_q
-* affirm
- - utter_goodbye
- - action_restart
-
-## issue+office+excel+notfixed
-> office_excel_fixed_q
-* deny
- - utter_ticket_reply
- > office_excel_not_fixed
-
-## issue+office+excel+notfixed+affirmanalyst
-> office_excel_not_fixed
-* affirm
- - utter_analyst_reply
- - action_restart
-
-## issue+office+excel+notfixed+denyanalyst
-> office_excel_not_fixed
-* deny
- - utter_goodbye
- - action_restart
-
-## issue+adobe
-> issue_asked
-* problem_adobe
- - utter_adobe_question 
- > adobe_issue_asked
-
-## issue+adobe+deny
-> adobe_issue_asked
-* deny
- - utter_further_help
- > adobe_issue_ticket
-
-## issue+adobe+deny+affirm
-> adobe_issue_ticket
-* affirm
- - utter_ticket_created_reply
- - action_restart
-
-## issue+adobe+deny+deny
-> adobe_issue_ticket
-* deny
- - utter_call_it
- - action_restart
-
-## issue+adobe+affirm
-> adobe_issue_asked
-* affirm
- - utter_generic_apology
- - utter_adobe_options
- > specific_adobe_issue
-
-## issue+adobe+affirm+other
-> specific_adobe_issue
-* issue_not_listed
- - utter_issue_not_found
- > other_ticket
-
-## issue+adobe+acrobat
-> specific_adobe_issue
-* problem_adobe_acrobat
- - utter_adobe_acrobat
- > adobe_acrobat_fixed_q
-
-## issue+adobe+acrobat+fixed
-> adobe_acrobat_fixed_q
-* affirm
- - utter_goodbye
- - action_restart
-
-## issue+adobe+acrobat+notfixed
-> adobe_acrobat_fixed_q
-* deny
- - utter_ticket_reply
- > adobe_acrobat_not_fixed
-
-## issue+adobe+acrobat+notfixed+affirmanalyst
-> adobe_acrobat_not_fixed
-* affirm
- - utter_analyst_reply
- - action_restart
-
-## issue+adobe+acrobat+notfixed+denyanalyst
-> adobe_acrobat_not_fixed
-* deny
- - utter_goodbye
- - action_restart
-
-## issue+adobe+creative
-> specific_adobe_issue
-* problem_adobe_creative
- - utter_adobe_creative
- > adobe_creative_fixed_q
-
-## issue+adobe+creative+fixed
-> adobe_creative_fixed_q
-* affirm
- - utter_goodbye
- - action_restart
-
-## issue+adobe+creative+notfixed
-> adobe_creative_fixed_q
-* deny
- - utter_ticket_reply
- > adobe_creative_not_fixed
-
-## issue+adobe+creative+notfixed+affirmanalyst
-> adobe_creative_not_fixed
-* affirm
- - utter_analyst_reply
- - action_restart
-
-## issue+adobe+creative+notfixed+denyanalyst
-> adobe_creative_not_fixed
-* deny
- - utter_goodbye
- - action_restart
-
-## issue+adobe+illustrator
-> specific_adobe_issue
-* problem_adobe_illustrator
- - utter_adobe_illustrator
- > adobe_illustrator_fixed_q
-
-## issue+adobe+illustrator+fixed
-> adobe_illustrator_fixed_q
-* affirm
- - utter_goodbye
- - action_restart
-
-## issue+adobe+illustrator+notfixed
-> adobe_illustrator_fixed_q
-* deny
- - utter_ticket_reply
- > adobe_illustrator_not_fixed
-
-## issue+adobe+illustrator+notfixed+affirmanalyst
-> adobe_illustrator_not_fixed
-* affirm
- - utter_analyst_reply
- - action_restart
-
-## issue+adobe+illustrator+notfixed+denyanalyst
-> adobe_illustrator_not_fixed
-* deny
- - utter_goodbye
- - action_restart
-
 ## issue+mouse
 > issue_asked
 * problem_mouse
@@ -1044,6 +790,141 @@
 
 ## issue+sound+hw+notfixed+denyanalyst
 > sound_hw_not_fixed
+* deny
+ - utter_goodbye
+ - action_restart
+
+## issue+word
+> issue_asked
+* problem_word
+ - utter_word_question 
+ > word_issue_asked
+
+## issue+word+deny
+> word_issue_asked
+* deny
+ - utter_further_help
+ > word_issue_ticket
+
+## issue+word+deny+affirm
+> word_issue_ticket
+* affirm
+ - utter_ticket_created_reply
+ - action_restart
+
+## issue+word+deny+deny
+> word_issue_ticket
+* deny
+ - utter_call_it
+ - action_restart
+
+## issue+word+affirm
+> word_issue_asked
+* affirm
+ - utter_generic_apology
+ - utter_word_options
+ > specific_word_issue
+
+## issue+word+affirm+other
+> specific_word_issue
+* issue_not_listed
+ - utter_issue_not_found
+ > other_ticket
+
+
+## issue+word+generalerrors
+> specific_word_issue
+* problem_word_generalerrors
+ - utter_word_generalerrors
+ > word_generalerrors_fixed_q
+
+## issue+word+generalerrors+fixed
+> word_generalerrors_fixed_q
+* affirm
+ - utter_goodbye
+ - action_restart
+
+## issue+word+generalerrors+notfixed
+> word_generalerrors_fixed_q
+* deny
+ - utter_ticket_reply
+ > word_generalerrors_not_fixed
+
+## issue+word+generalerrors+notfixed+affirmanalyst
+> word_generalerrors_not_fixed
+* affirm
+ - utter_analyst_reply
+ - action_restart
+
+## issue+word+generalerrors+notfixed+denyanalyst
+> word_generalerrors_not_fixed
+* deny
+ - utter_goodbye
+ - action_restart
+
+## issue+powerpoint
+> issue_asked
+* problem_powerpoint
+ - utter_powerpoint_question 
+ > powerpoint_issue_asked
+
+## issue+powerpoint+deny
+> powerpoint_issue_asked
+* deny
+ - utter_further_help
+ > powerpoint_issue_ticket
+
+## issue+powerpoint+deny+affirm
+> powerpoint_issue_ticket
+* affirm
+ - utter_ticket_created_reply
+ - action_restart
+
+## issue+powerpoint+deny+deny
+> powerpoint_issue_ticket
+* deny
+ - utter_call_it
+ - action_restart
+
+## issue+powerpoint+affirm
+> powerpoint_issue_asked
+* affirm
+ - utter_generic_apology
+ - utter_powerpoint_options
+ > specific_powerpoint_issue
+
+## issue+powerpoint+affirm+other
+> specific_powerpoint_issue
+* issue_not_listed
+ - utter_issue_not_found
+ > other_ticket
+
+## issue+powerpoint+generalerrors
+> specific_powerpoint_issue
+* problem_powerpoint_generalerrors
+ - utter_powerpoint_generalerrors
+ > powerpoint_generalerrors_fixed_q
+
+## issue+powerpoint+generalerrors+fixed
+> powerpoint_generalerrors_fixed_q
+* affirm
+ - utter_goodbye
+ - action_restart
+
+## issue+powerpoint+generalerrors+notfixed
+> powerpoint_generalerrors_fixed_q
+* deny
+ - utter_ticket_reply
+ > powerpoint_generalerrors_not_fixed
+
+## issue+powerpoint+generalerrors+notfixed+affirmanalyst
+> powerpoint_generalerrors_not_fixed
+* affirm
+ - utter_analyst_reply
+ - action_restart
+
+## issue+powerpoint+generalerrors+notfixed+denyanalyst
+> powerpoint_generalerrors_not_fixed
 * deny
  - utter_goodbye
  - action_restart
