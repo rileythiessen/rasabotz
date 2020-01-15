@@ -23,8 +23,7 @@ intents:
 - problem_printer_missing
 - problem_vpn
 - problem_vpn_connection
-- problem_entrust
-- problem_entrust_certificates
+- problem_vpn_entrust
 - problem_mykey
 - problem_mykey_general
 - problem_outlook
@@ -47,7 +46,8 @@ intents:
 - problem_excel_generalissues
 - problem_aacrobat
 - problem_aacrobat_generalissues
-
+- problem_skype
+- problem_skype_login
 templates:
   utter_greet:
   - text: Hello AAFC Employee. I am a chatbot designed to help you I can currently
@@ -213,8 +213,10 @@ templates:
   utter_vpn_options:
   - text: Please select the issue you are having from the list below.
     buttons:
-    - title: VPN Connection
+    - title: VPN General
       payload: /problem_vpn_connection
+    - title: Entrust
+      payload: /problem_vpn_entrust
   utter_vpn_connection:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/vpnconnection. Did this resolve your issue?
@@ -223,23 +225,9 @@ templates:
       payload: /affirm
     - title: No
       payload: /deny
-  utter_entrust_question:
-  - text: It appears that you are having a entrust issue. Is this correct?
-    buttons:
-    - title: Yes
-      payload: /affirm
-    - title: No
-      payload: /deny
-  utter_entrust_options:
-  - text: Please select the issue you are having from the list below.
-    buttons:
-    - title: Entrust Certificate Error
-      payload: /problem_entrust_certificates
-    - title: My Issue Is Not Listed
-      payload: /issue_not_listed
-  utter_entrust_certificates:
+  utter_vpn_entrust:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
-      at http://ourkb.com/entrustcertificates. Did this resolve your issue?
+      at http://ourkb.com/vpnentrust. Did this resolve your issue?
     buttons:
     - title: Yes
       payload: /affirm
@@ -330,7 +318,7 @@ templates:
     - title: Yes
       payload: /affirm
     - title: No
-      payload: /deny  
+      payload: /deny
   utter_mouse_question:
   - text: It appears that you are having a mouse issue. Is this correct?
     buttons:
@@ -362,14 +350,16 @@ templates:
     - title: My Issue Is Not Listed
       payload: /issue_not_listed
   utter_sound_nwork:
-  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/soundnwork. Did this resolve your issue?
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
+      at http://ourkb.com/soundnwork. Did this resolve your issue?
     buttons:
     - title: Yes
       payload: /affirm
     - title: No
       payload: /deny
   utter_sound_hw:
-  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/soundhw. Did this resolve your issue?
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
+      at http://ourkb.com/soundhw. Did this resolve your issue?
     buttons:
     - title: Yes
       payload: /affirm
@@ -390,7 +380,8 @@ templates:
     - title: My Issue Is Not Listed
       payload: /issue_not_listed
   utter_word_generalerrors:
-  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/wordgeneralerrors. Did this resolve your issue?
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
+      at http://ourkb.com/wordgeneralerrors. Did this resolve your issue?
     buttons:
     - title: Yes
       payload: /affirm
@@ -411,7 +402,8 @@ templates:
     - title: My Issue Is Not Listed
       payload: /issue_not_listed
   utter_powerpoint_generalerrors:
-  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/powerpointgeneralerrors. Did this resolve your issue?
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
+      at http://ourkb.com/powerpointgeneralerrors. Did this resolve your issue?
     buttons:
     - title: Yes
       payload: /affirm
@@ -432,7 +424,8 @@ templates:
     - title: My Issue Is Not Listed
       payload: /issue_not_listed
   utter_excel_generalissues:
-  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/excelgeneralissues. Did this resolve your issue?
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
+      at http://ourkb.com/excelgeneralissues. Did this resolve your issue?
     buttons:
     - title: Yes
       payload: /affirm
@@ -453,7 +446,30 @@ templates:
     - title: My Issue Is Not Listed
       payload: /issue_not_listed
   utter_aacrobat_generalissues:
-  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/aacrobatgeneralissues. Did this resolve your issue?
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
+      at http://ourkb.com/aacrobatgeneralissues. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_skype_question:
+  - text: It appears that you are having a skype issue. Is this correct?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_skype_options:
+  - text: Please select the issue you are having from the list below.
+    buttons:
+    - title: Cannot Login
+      payload: /problem_skype_login
+    - title: My Issue Is Not Listed
+      payload: /issue_not_listed
+  utter_skype_login:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
+      at http://ourkb.com/skypelogin. Did this resolve your issue?
     buttons:
     - title: Yes
       payload: /affirm
@@ -487,9 +503,7 @@ actions:
 - utter_vpn_question
 - utter_vpn_options
 - utter_vpn_connection
-- utter_entrust_question
-- utter_entrust_options
-- utter_entrust_certificates
+- utter_vpn_entrust
 - utter_mykey_question
 - utter_mykey_options
 - utter_mykey_general
@@ -520,3 +534,6 @@ actions:
 - utter_aacrobat_question
 - utter_aacrobat_options
 - utter_aacrobat_generalissues
+- utter_skype_question
+- utter_skype_options
+- utter_skype_login

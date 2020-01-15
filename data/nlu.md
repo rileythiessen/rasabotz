@@ -147,10 +147,6 @@
 - sslvpn isnt working
 - i cant login from home
 - my vpn is not working properly
-
-## intent:problem_vpn_connection
-
-## intent:problem_entrust
 - My Entrust doesn't work
 - I am getting certificate errors on entrust
 - I get an error about my entrust certificates
@@ -159,7 +155,8 @@
 - my entrust app wont work
 - entrust code doesnt work
 
-## intent:problem_entrust_certificates
+## intent:problem_vpn_connection
+## intent:problem_vpn_entrust
 
 ## intent:problem_mykey
 ## intent:problem_mykey_general
@@ -193,6 +190,8 @@
 ## intent:problem_excel
 ## intent:problem_excel_generalissues
 
+## intent:problem_aacrobat
+## intent:problem_aacrobat_generalissues
 
 ## intent:problem_phone
 - My phone isn't working
@@ -231,6 +230,9 @@
 
 ## intent:problem_phone_password
 ## intent:problem_phone_broken
+
+## intent:problem_skype
+## intent:problem_skype_login
 
 
 ## intent:issue_not_listed

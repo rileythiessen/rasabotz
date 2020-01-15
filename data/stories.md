@@ -64,12 +64,6 @@
  - utter_issue_not_found
  > other_ticket
 
-## issue+entrust+affirm+other
-> specific_entrust_issue
-* issue_not_listed
- - utter_issue_not_found
- > other_ticket
-
 ## issue+vpn+affirm+other
 > specific_vpn_issue
 * issue_not_listed
@@ -355,66 +349,36 @@
  - utter_goodbye
  - action_restart
 
-## issue+entrust
-> issue_asked
-* problem_entrust
- - utter_entrust_question 
- > entrust_issue_asked
+## issue+vpn+entrust
+> specific_vpn_issue
+* problem_vpn_entrust
+ - utter_vpn_entrust
+ > vpn_entrust_fixed_q
 
-## issue+entrust+deny
-> entrust_issue_asked
-* deny
- - utter_further_help
- > entrust_issue_ticket
-
-## issue+entrust+deny+affirm
-> entrust_issue_ticket
-* affirm
- - utter_ticket_created_reply
- - action_restart
-
-## issue+entrust+deny+deny
-> entrust_issue_ticket
-* deny
- - utter_call_it
- - action_restart
-
-## issue+entrust+affirm
-> entrust_issue_asked
-* affirm
- - utter_generic_apology
- - utter_entrust_options
- > specific_entrust_issue
-
-## issue+entrust+certificates
-> specific_entrust_issue
-* problem_entrust_certificates
- - utter_entrust_certificates
- > entrust_certificates_fixed_q
-
-## issue+entrust+certificates+fixed
-> entrust_certificates_fixed_q
+## issue+vpn+entrust+fixed
+> vpn_entrust_fixed_q
 * affirm
  - utter_goodbye
  - action_restart
 
-## issue+entrust+certificates+notfixed
-> entrust_certificates_fixed_q
+## issue+vpn+entrust+notfixed
+> vpn_entrust_fixed_q
 * deny
  - utter_ticket_reply
- > entrust_certificates_not_fixed
+ > vpn_entrust_not_fixed
 
-## issue+entrust+certificates+notfixed+affirmanalyst
-> entrust_certificates_not_fixed
+## issue+vpn+entrust+notfixed+affirmanalyst
+> vpn_entrust_not_fixed
 * affirm
  - utter_analyst_reply
  - action_restart
 
-## issue+entrust+certificates+notfixed+denyanalyst
-> entrust_certificates_not_fixed
+## issue+vpn+entrust+notfixed+denyanalyst
+> vpn_entrust_not_fixed
 * deny
  - utter_goodbye
  - action_restart
+
 
 ## issue+mykey
 > issue_asked
@@ -1067,6 +1031,73 @@
 
 ## issue+aacrobat+generalissues+notfixed+denyanalyst
 > aacrobat_generalissues_not_fixed
+* deny
+ - utter_goodbye
+ - action_restart
+
+## issue+skype
+> issue_asked
+* problem_skype
+ - utter_skype_question 
+ > skype_issue_asked
+
+## issue+skype+deny
+> skype_issue_asked
+* deny
+ - utter_further_help
+ > skype_issue_ticket
+
+## issue+skype+deny+affirm
+> skype_issue_ticket
+* affirm
+ - utter_ticket_created_reply
+ - action_restart
+
+## issue+skype+deny+deny
+> skype_issue_ticket
+* deny
+ - utter_call_it
+ - action_restart
+
+## issue+skype+affirm
+> skype_issue_asked
+* affirm
+ - utter_generic_apology
+ - utter_skype_options
+ > specific_skype_issue
+
+## issue+skype+affirm+other
+> specific_skype_issue
+* issue_not_listed
+ - utter_issue_not_found
+ > other_ticket
+
+## issue+skype+login
+> specific_skype_issue
+* problem_skype_login
+ - utter_skype_login
+ > skype_login_fixed_q
+
+## issue+skype+login+fixed
+> skype_login_fixed_q
+* affirm
+ - utter_goodbye
+ - action_restart
+
+## issue+skype+login+notfixed
+> skype_login_fixed_q
+* deny
+ - utter_ticket_reply
+ > skype_login_not_fixed
+
+## issue+skype+login+notfixed+affirmanalyst
+> skype_login_not_fixed
+* affirm
+ - utter_analyst_reply
+ - action_restart
+
+## issue+skype+login+notfixed+denyanalyst
+> skype_login_not_fixed
 * deny
  - utter_goodbye
  - action_restart
