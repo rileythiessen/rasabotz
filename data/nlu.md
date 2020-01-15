@@ -177,20 +177,73 @@
 - Outlook is being slow
 - Emails are being slow
 - can't receive email
+- I can’t see my team’s shared calendar 
+- I can’t see my old emails
+- My emails disappeared 
+- The outlook ribbon is missing
+- Where did my emails go
 
 ## intent:problem_outlook_wopen
 ## intent:problem_outlook_password
 
 ## intent:problem_word
+- I cant access word
+- My word is in french
+- My word is in the wrong language
+- Word won’t work
+- Word isnt working
+- Word isn’t saving
+- Word keeps crashing
+- My word document keeps crashing
+- My ribbon is missing in word
+- Word is slow
+- Word keeping going unresponsive
+- My word froze and I need to save my work
+- Word has become unclickable
+- I wish I didn’t have to use word
+
 ## intent:problem_word_generalerrors
 
 ## intent:problem_powerpoint
+- My powerpoint presentation wont open
+- my powerpoint wont open
+- powerpoint is being slow
+- My ribbon is missing in powerpoint
+- I can’t copy and paste slides in powerpoint
+- When I paste a slide it keeps coming out as an image
+- Powerpoint has frozen
+- I wish I didn’t have to use powerpoint
+- Everything formatted on me in powerpoint
+- Presentation mode isn’t working correctly in powerpoint
+
 ## intent:problem_powerpoint_generalerrors
 
 ## intent:problem_excel
+- My excel document wont open
+- my excel wont open
+- Excel is being slow
+- My spreadsheet isn’t opening
+- The ribbon in excel is missing
+- All my microsoft programs have froze
+- I already have excel open and I’m trying to open another document, but it wont work
+- I wish I didn’t have to use Excel
+
 ## intent:problem_excel_generalissues
 
 ## intent:problem_aacrobat
+- I cannot open a PDF file on a webpage 
+- I cannot open a PDF file that is attached to an e-mail
+- I cannot open a PDF on my computer
+- I cant edit a PDF file
+- Acrobat won’t load pdfs
+- MY PDFs aren’t opening properly
+- I can’t open a PDF
+- Adobe pdf isnt working
+- I get an error message when I try to open pdf
+- Nothing happens when I click to open a pdf
+- My PDFs are opening on a webpage, I want them to open with Adobe
+- My PDF comes up in a browser, how can I get it to open in the reader
+
 ## intent:problem_aacrobat_generalissues
 
 ## intent:problem_phone
