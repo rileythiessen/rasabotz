@@ -950,3 +950,100 @@
 * problem_mouse_broken
  - utter_generic_broken
  > broken_q
+
+## issue+sound
+> issue_asked
+* problem_sound
+ - utter_sound_question 
+ > sound_issue_asked
+
+## issue+sound+deny
+> sound_issue_asked
+* deny
+ - utter_further_help
+ > sound_issue_ticket
+
+## issue+sound+deny+affirm
+> sound_issue_ticket
+* affirm
+ - utter_ticket_created_reply
+ - action_restart
+
+## issue+sound+deny+deny
+> sound_issue_ticket
+* deny
+ - utter_call_it
+ - action_restart
+
+## issue+sound+affirm
+> sound_issue_asked
+* affirm
+ - utter_generic_apology
+ - utter_sound_options
+ > specific_sound_issue
+
+## issue+sound+affirm+other
+> specific_sound_issue
+* issue_not_listed
+ - utter_issue_not_found
+ > other_ticket
+
+## issue+sound+nwork
+> specific_sound_issue
+* problem_sound_nwork
+ - utter_sound_nwork
+ > sound_nwork_fixed_q
+
+## issue+sound+nwork+fixed
+> sound_nwork_fixed_q
+* affirm
+ - utter_goodbye
+ - action_restart
+
+## issue+sound+nwork+notfixed
+> sound_nwork_fixed_q
+* deny
+ - utter_ticket_reply
+ > sound_nwork_not_fixed
+
+## issue+sound+nwork+notfixed+affirmanalyst
+> sound_nwork_not_fixed
+* affirm
+ - utter_analyst_reply
+ - action_restart
+
+## issue+sound+nwork+notfixed+denyanalyst
+> sound_nwork_not_fixed
+* deny
+ - utter_goodbye
+ - action_restart
+
+## issue+sound+hw
+> specific_sound_issue
+* problem_sound_hw
+ - utter_sound_hw
+ > sound_hw_fixed_q
+
+## issue+sound+hw+fixed
+> sound_hw_fixed_q
+* affirm
+ - utter_goodbye
+ - action_restart
+
+## issue+sound+hw+notfixed
+> sound_hw_fixed_q
+* deny
+ - utter_ticket_reply
+ > sound_hw_not_fixed
+
+## issue+sound+hw+notfixed+affirmanalyst
+> sound_hw_not_fixed
+* affirm
+ - utter_analyst_reply
+ - action_restart
+
+## issue+sound+hw+notfixed+denyanalyst
+> sound_hw_not_fixed
+* deny
+ - utter_goodbye
+ - action_restart

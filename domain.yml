@@ -44,6 +44,9 @@ intents:
 - problem_adobe_illustrator
 - problem_mouse
 - problem_mouse_broken
+- problem_sound
+- problem_sound_nwork
+- problem_sound_hw
 
 templates:
   utter_greet:
@@ -419,7 +422,37 @@ templates:
     - title: Broken Mouse
       payload: /problem_mouse_broken
     - title: My Issue Is Not Listed
-      payload: /issue_not_listed  
+      payload: /issue_not_listed
+  utter_sound_question:
+  - text: It appears that you are having a sound issue. Is this correct?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_sound_options:
+  - text: Please select the issue you are having from the list below.
+    buttons:
+    - title: Sound Not Working
+      payload: /problem_sound_nwork
+    - title: Speaker/Sound Bar Not Working
+      payload: /problem_sound_hw
+    - title: My Issue Is Not Listed
+      payload: /issue_not_listed
+  utter_sound_nwork:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/soundnwork. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_sound_hw:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/soundhw. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
 
 actions:
 - utter_greet
@@ -476,3 +509,7 @@ actions:
 - utter_adobe_illustrator
 - utter_mouse_question
 - utter_mouse_options
+- utter_sound_question
+- utter_sound_options
+- utter_sound_nwork
+- utter_sound_hw

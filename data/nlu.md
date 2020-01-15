@@ -119,6 +119,10 @@
 
 ## intent:problem_keyboard_broken
 
+## intent:problem_sound
+## intent:problem_sound_nwork
+## intent:problem_sound_hw
+
 ## intent:problem_printer
 - The printer is not working.
 - The printer will not print
