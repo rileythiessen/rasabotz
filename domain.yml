@@ -8,81 +8,471 @@ intents:
 - deny
 - problem_monitor
 - problem_keyboard
-- problem_outlook
 - problem_monitor_flicker
 - problem_keyboard_broken
 - need_analyst
 - ticket_creation
 - bot_capabilities
+- generic_problem
+- generic_software
+- generic_hardware
+- problem_monitor_broken
+- problem_printer
+- problem_printer_slow
+- problem_printer_error
+- problem_printer_missing
+- problem_vpn
+- problem_vpn_connection
+- problem_entrust
+- problem_entrust_certificates
+- problem_mykey
+- problem_mykey_general
+- problem_outlook
+- problem_outlook_wopen
+- problem_outlook_password
+- problem_phone
+- problem_phone_password
+- problem_phone_broken
+- issue_not_listed
+- problem_office
+- problem_office_word
+- problem_office_powerpoint
+- problem_office_excel
+- problem_adobe
+- problem_adobe_acrobat
+- problem_adobe_creative
+- problem_adobe_illustrator
+- problem_mouse
+- problem_mouse_broken
+
 templates:
   utter_greet:
   - text: Hello AAFC Employee. I am a chatbot designed to help you I can currently
-      help with acquiring any hardware/software and also with any issues?
+      help with any of the issues below. Please select one.
     buttons:
-    - title: Issue
-      payload: /problem_monitor    
+    - title: I am having an issue
+      payload: /generic_problem
+    - title: I need hardware
+      payload: /generic_hardware
+    - title: I need software
+      payload: /generic_software
+  utter_generic_issue:
+  - text: It appears you've identified that you're having an issue. Can you please
+      provide me with more info so I can help you further.
+  utter_generic_software:
+  - text: It appears you've identified that you require software. Can you please provide
+      me with more info so I can help you further.
+  utter_generic_hardware:
+  - text: It appears you've identified that you require hardware. Can you please provide
+      me with more info so I can help you further.
   utter_monitor_question:
-  - text: You've identified a monitor issue. Is this correct?
-  utter_monitor_answer:
-  - text: I am very sorry to hear that. Can you please provide me with some additional
-      details regarding your monitor?
-  utter_monitor_flicker_confirm:
-  - text: You've identified a flickering monitor issue. Is this correct?
-  utter_monitor_flicker:
-  - text: Ah... The good old monitor flickering issue. This is a very common issue
-      and I'm sorry to hear you're experiencing this. Resolutions can be found at
-      http://monitorflickeringsucks.com
+  - text: It appears that you are having a monitor issue is this correct?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
   utter_keyboard_question:
-  - text: It appears you are having an issue with your keyboard. Is this correct?
-  utter_keyboard_answer:
-  - text: I am very sorry to hear that. Can you please provide me with some additional
-      details regarding your keyboard?
-  utter_keyboard_broken_confirm:
-  - text: You've identified an issue with a broken keyboard. Is this correct?
-  utter_keyboard_broken:
-  - text: Ah... It appears that your keyboard is just broken. Unfortunately as a bot
-      I cannot fix that issue.
+  - text: It appears that you are having a keyboard issue is this correct?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_printer_question:
+  - text: It appears that you are having a printer issue is this correct?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_generic_apology:
+  - text: I am very sorry to hear that.
+  utter_monitor_options:
+  - text: Please select the issue you are having from the list below.
+    buttons:
+    - title: Flickering Issues
+      payload: /problem_monitor_flicker
+    - title: Broken Monitor
+      payload: /problem_monitor_broken
+    - title: My Issue Is Not Listed
+      payload: /issue_not_listed
+  utter_keyboard_options:
+  - text: Please select the issue you are having from the list below.
+    buttons:
+    - title: Broken Keyboard
+      payload: /problem_keyboard_broken
+    - title: My Issue Is Not Listed
+      payload: /issue_not_listed
+  utter_printer_options:
+  - text: Please select the issue you are having from the list below.
+    buttons:
+    - title: Slow Printer
+      payload: /problem_printer_slow
+    - title: Printer Error
+      payload: /problem_printer_error
+    - title: Printer Missing
+      payload: /problem_printer_missing
+    - title: My Issue Is Not Listed
+      payload: /issue_not_listed
+  utter_monitor_flicker:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
+      at http://ourkb.com/flickeringresolution. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_printer_slow:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
+      at http://ourkb.com/myprinterisslow. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_printer_error:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
+      at http://ourkb.com/printererror. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_printer_missing:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
+      at http://ourkb.com/printermissing. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_buttons:
+  - text: Options
+  utter_generic_broken:
+  - text: I'm sorry to hear it is broken. This will need to be handled by an onsite
+      technician. Would you like me to create a ticket and assign to your nearest
+      analyst? If you select no I cannot offer any further assistance.
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
   utter_further_help:
-  - text: If I was not able to fully solve your issue today I can create a ticket
-      for you. Additionally, I can also assign an analyst directly to this chat to
-      help resolve your issue. What would you like to do? If you would like to restart
-      this chat please say bye.
-  utter_outlook_question:
-  - text: It appears you are having an issue with your outlook. Is this correct?
-  utter_outlook_answer:
-  - text: I am very sorry to hear that. Some common resolutions for Outlook issues
-      can be found over here at www.outlookhelpplzz.com
+  - text: It appears I was unable to figure out your issue. Would you like me to create
+      a ticket for you so that your problem can be resolved by one of my human colleagues?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_issue_not_found:
+  - text: It appears that your issue is not listed. Would you like me to create a
+      ticket for you so that your problem can be resolved by one of my colleagues.
+      Creating a ticket will also ensure that your issue gets added in the future.
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
   utter_goodbye:
-  - text: Bye, thank you for coming to Riley's bot shop! Please greet me to start
-      this conversation again :)
+  - text: Hopefully I was able to resolve your issue or create a ticket for you! Thank
+      you for coming to Riley's bot shop! Please greet me to start this conversation
+      again :)
   utter_generic_deny:
-  - text: Oops! Please ask greet me again so we can restart this conversation, guess
-      I was wrong :(
-  utter_generic_ticket_question:
-  - text: Sorry that I wasn't able to fully solve your issue today :(.
+  - text: dasdasd
   utter_ticket_reply:
-  - text: It appears that you wanted me to create a ticket for you. Your ticket has
-      been created and the details will be emailed to you shortly. For any further
-      assistance please greet me again.
+  - text: It appears that I was not able to resolve your issue. A ticket has been
+      created for you (SXXXXXX) and the details will be emailed to you shortly. Would
+      you like to add an analyst to this chat?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_call_it:
+  - text: A ticket will not be created. If you would like to speak to IT support directly,
+      please call 555-555-5555.
+  utter_ticket_created_reply:
+  - text: A ticket has been created for you (SXXXXXX) and assigned to your nearest
+      analyst. The details will be emailed to you shortly. For any further bot assistance
+      please greet me again.
   utter_analyst_reply:
-  - text: It appears that you would like me to connect you to an analyst. An analyst
-      will be with you shortly. (ETA coming) For any further bot assistance please
-      greet me again.
+  - text: An analyst will be with you shortly. (ETA coming) For any further bot assistance
+      please greet me again.
+  utter_vpn_question:
+  - text: It appears that you are having a vpn issue. Is this correct?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_vpn_options:
+  - text: Please select the issue you are having from the list below.
+    buttons:
+    - title: VPN Connection
+      payload: /problem_vpn_connection
+  utter_vpn_connection:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
+      at http://ourkb.com/vpnconnection. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_entrust_question:
+  - text: It appears that you are having a entrust issue. Is this correct?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_entrust_options:
+  - text: Please select the issue you are having from the list below.
+    buttons:
+    - title: Entrust Certificate Error
+      payload: /problem_entrust_certificates
+    - title: My Issue Is Not Listed
+      payload: /issue_not_listed
+  utter_entrust_certificates:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
+      at http://ourkb.com/entrustcertificates. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_mykey_question:
+  - text: It appears that you are having a mykey issue. Is this correct?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_mykey_options:
+  - text: Please select the issue you are having from the list below.
+    buttons:
+    - title: General MyKey (All)
+      payload: /problem_mykey_general
+    - title: My Issue Is Not Listed
+      payload: /issue_not_listed
+  utter_mykey_general:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
+      at http://ourkb.com/mykeygeneral. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_outlook_question:
+  - text: It appears that you are having a outlook issue. Is this correct?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_outlook_options:
+  - text: Please select the issue you are having from the list below.
+    buttons:
+    - title: Outlook Won't Open
+      payload: /problem_outlook_wopen
+    - title: Outlook Password Prompt
+      payload: /problem_outlook_password
+    - title: My Issue Is Not Listed
+      payload: /issue_not_listed
+  utter_outlook_wopen:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
+      at http://ourkb.com/outlookwopen. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_outlook_password:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
+      at http://ourkb.com/outlookpassword. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_phone_question:
+  - text: It appears that you are having a phone issue. Is this correct?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_phone_options:
+  - text: Please select the issue you are having from the list below.
+    buttons:
+    - title: Phone Password
+      payload: /problem_phone_password
+    - title: Phone Broken
+      payload: /problem_phone_broken
+    - title: My Issue Is Not Listed
+      payload: /issue_not_listed
+  utter_phone_password:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
+      at http://ourkb.com/phonepassword. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_phone_broken:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
+      at http://ourkb.com/phonebroken. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_office_question:
+  - text: It appears that you are having a office issue. Is this correct?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_office_options:
+  - text: Please select the issue you are having from the list below.
+    buttons:
+    - title: Microsoft Word
+      payload: /problem_office_word
+    - title: Microsoft Powerpoint
+      payload: /problem_office_powerpoint
+    - title: Microsoft Excel
+      payload: /problem_office_excel
+    - title: My Issue Is Not Listed
+      payload: /issue_not_listed
+  utter_office_word:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/officeword. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_office_powerpoint:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/officepowerpoint. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_office_excel:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/officeexcel. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_adobe_question:
+  - text: It appears that you are having an issue with one of the adobe products. Is this correct?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_adobe_options:
+  - text: Please select the program you are having issues with from the list below.
+    buttons:
+    - title: Adobe Acrobat
+      payload: /problem_adobe_acrobat
+    - title: Adobe Creative Suite
+      payload: /problem_adobe_creative
+    - title: Adobe Illustrator
+      payload: /problem_adobe_illustrator
+    - title: My Issue Is Not Listed
+      payload: /issue_not_listed
+  utter_adobe_acrobat:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/adobeacrobat. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_adobe_creative:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/adobecreative. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_adobe_illustrator:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/adobeillustrator. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_mouse_question:
+  - text: It appears that you are having a mouse issue. Is this correct?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_mouse_options:
+  - text: Please select the issue you are having from the list below.
+    buttons:
+    - title: Broken Mouse
+      payload: /problem_mouse_broken
+    - title: My Issue Is Not Listed
+      payload: /issue_not_listed  
+
 actions:
 - utter_greet
-- utter_goodbye
+- utter_generic_issue
+- utter_generic_software
+- utter_generic_hardware
 - utter_monitor_question
-- utter_monitor_answer
 - utter_keyboard_question
-- utter_keyboard_answer
-- utter_outlook_question
-- utter_outlook_answer
-- utter_generic_deny
+- utter_printer_question
+- utter_generic_apology
+- utter_monitor_options
+- utter_keyboard_options
+- utter_printer_options
 - utter_monitor_flicker
-- utter_monitor_flicker_confirm
-- utter_keyboard_broken
-- utter_keyboard_broken_confirm
-- utter_generic_ticket_question
-- utter_ticket_reply
-- utter_analyst_reply
+- utter_printer_slow
+- utter_printer_error
+- utter_printer_missing
+- utter_generic_broken
 - utter_further_help
+- utter_goodbye
+- utter_generic_deny
+- utter_ticket_reply
+- utter_ticket_created_reply
+- utter_analyst_reply
+- utter_buttons
+- utter_call_it
+- utter_vpn_question
+- utter_vpn_options
+- utter_vpn_connection
+- utter_entrust_question
+- utter_entrust_options
+- utter_entrust_certificates
+- utter_mykey_question
+- utter_mykey_options
+- utter_mykey_general
+- utter_outlook_question
+- utter_outlook_options
+- utter_outlook_wopen
+- utter_outlook_password
+- utter_phone_question
+- utter_phone_options
+- utter_phone_password
+- utter_phone_broken
+- utter_issue_not_found
+- utter_office_question
+- utter_office_options
+- utter_office_word
+- utter_office_powerpoint
+- utter_office_excel
+- utter_adobe_question
+- utter_adobe_options
+- utter_adobe_acrobat
+- utter_adobe_creative
+- utter_adobe_illustrator
+- utter_mouse_question
+- utter_mouse_options

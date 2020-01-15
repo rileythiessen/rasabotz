@@ -14,6 +14,9 @@
 - Hello
 - Howdy
 
+
+## intent:generic_problem
+
 ## intent:bot_capabilities
 - what can you do?
 - what are you capable of?
@@ -64,13 +67,35 @@
 - Issue with second monitor
 - My monitor is flcikering because i accidentally punched it and it fell off of the desk.
 - My monitor is not working
-
-## intent:problem_monitor_flicker
-- It is flickering
 - The monitor is flickering
 - My second monitor keeps flickering
 - My second monitor keeps flickering...
-- Flickering issues
+- Flickering issues with my monitor...
+
+## intent:problem_monitor_flicker
+## intent:problem_monitor_broken
+
+## intent: problem_mouse
+- I need help with my mouse
+- There is an issue with my mouse
+- I am having problems with my mouse
+- I can't connect to my mouse
+- I have an issue with my mouse
+- Issue with mouse
+- mouse issue
+- Wow I am really having this odd issue with my mouse
+- I am having a super weird issue involving my mouse
+- My mouse is physically broken
+- My mouse will not turn on
+- My mouse keeps turning off
+- I have this mouse that stopped working
+- My mouse is broken
+- My mouse is not functioning
+- My mouse doesn't work please help
+- For whatever reason, my mouse is not working
+- My mouse fell off my desk and is broken
+
+## intent:broken_mouse
 
 ## intent:problem_keyboard
 - I need help with my keyboard
@@ -82,8 +107,6 @@
 - keyboard issue
 - Wow I am really having this odd issue with my keyboard
 - I am having a super weird issue involving my keyboard
-
-## intent:problem_keyboard_broken
 - My keyboard is physically broken
 - My keyboard will not turn on
 - My keyboard keeps turning off
@@ -93,6 +116,49 @@
 - My keyboard doesn't work please help
 - For whatever reason, my keyboard is not working
 - My keyboard fell off my desk and is broken
+
+## intent:problem_keyboard_broken
+
+## intent:problem_printer
+- The printer is not working.
+- The printer will not print
+- The printer won't print
+- Why won't my printer print
+- Help please my printer isn't working
+- My print jobs are sent to the wrong printer
+- I get an error on the printer
+- It takes too long to print
+- Nothing happens when I try and print
+
+## intent:problem_printer_slow
+## intent:problem_printer_error
+## intent:problem_printer_missing
+
+## intent:problem_vpn
+- I'm unable to connect to the vpn.
+- Not connecting to the vpn
+- vpn is not working
+- vpn is not functioning
+- I can't connect when working remotely
+- sslvpn isnt working
+- i cant login from home
+- my vpn is not working properly
+
+## intent:problem_vpn_connection
+
+## intent:problem_entrust
+- My Entrust doesn't work
+- I am getting certificate errors on entrust
+- I get an error about my entrust certificates
+- why isn't my entrust working
+- help me fix my entrust
+- my entrust app wont work
+- entrust code doesnt work
+
+## intent:problem_entrust_certificates
+
+## intent:problem_mykey
+## intent:problem_mykey_general
 
 ## intent:problem_outlook
 - I need help with my outlook
@@ -107,7 +173,76 @@
 - I can't see any email
 - Outlook is not responsive
 - Email is not functioning at all
+- Outlook is being slow
+- Emails are being slow
+- can't receive email
 
+## intent:problem_outlook_wopen
+## intent:problem_outlook_password
+
+## intent:problem_office
+- my powerpoint wont work
+- my powerpoint wont present
+- my word wont open
+- my word is in french
+- something is wrong with office
+- something is wrong with my word
+- something is wrong with my powerpoint
+- something is wrong with my spreadsheets
+- my excel wont work
+- my excel sucks
+- microsoft word wont work
+- microsoft worrd wont open my .doc files
+- microsoft excel is slow
+
+## intent:problem_office_word
+## intent:problem_office_powerpoint
+## intent:problem_office_excel
+
+## intent:problem_phone
+- My phone isn't working
+- I need a password reset on my phone
+- My phone password won't work
+- My phone password will not work
+- My email doesnt work on my phone 
+- I can’t receive emails on my phone
+- I can’t send emails on my phone
+- My phone won’t connect to the network
+- My phone doesnt work
+- I need help with my android
+- I need help with my blackberry
+- I need help with my iPhone
+- My knox isn't working
+- My phone sucks
+- My phone is being crappy
+- My phone wont connect to network
+- My phone will not activate
+- How do I replace my phone
+- How do I get a new phone
+- What am I allowed to do with my device
+- I can’t receive emails on my phone
+- I can’t send emails on my phone
+- I can’t see my emails on my phone
+- My phone isn’t displaying my emails
+- People aren’t getting emails I send from my phone
+- I don’t think emails from my phone are being sent
+- I don’t see the same emails on my phone and computer
+- I can’t sign into my phone
+- I can’t remember remember my phone password
+- I’m locked out of my phone
+- I can’t get into my phone
+- I think someone locked me out of my phone
+
+
+## intent:problem_phone_password
+## intent:problem_phone_broken
+
+## intent:problem_adobe
+## intent:problem_adobe_acrobat
+## intent:problem_adobe_creative
+## intent:problem_adobe_illustrator
+
+## intent:issue_not_listed
 
 ## intent:need_analyst
 - I need an analyst
