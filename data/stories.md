@@ -928,3 +928,145 @@
 * deny
  - utter_goodbye
  - action_restart
+
+## issue+excel
+> issue_asked
+* problem_excel
+ - utter_excel_question 
+ > excel_issue_asked
+
+## issue+excel+deny
+> excel_issue_asked
+* deny
+ - utter_further_help
+ > excel_issue_ticket
+
+## issue+excel+deny+affirm
+> excel_issue_ticket
+* affirm
+ - utter_ticket_created_reply
+ - action_restart
+
+## issue+excel+deny+deny
+> excel_issue_ticket
+* deny
+ - utter_call_it
+ - action_restart
+
+## issue+excel+affirm
+> excel_issue_asked
+* affirm
+ - utter_generic_apology
+ - utter_excel_options
+ > specific_excel_issue
+
+## issue+excel+affirm+other
+> specific_excel_issue
+* issue_not_listed
+ - utter_issue_not_found
+ > other_ticket
+
+
+
+
+
+## issue+excel+generalissues
+> specific_excel_issue
+* problem_excel_generalissues
+ - utter_excel_generalissues
+ > excel_generalissues_fixed_q
+
+## issue+excel+generalissues+fixed
+> excel_generalissues_fixed_q
+* affirm
+ - utter_goodbye
+ - action_restart
+
+## issue+excel+generalissues+notfixed
+> excel_generalissues_fixed_q
+* deny
+ - utter_ticket_reply
+ > excel_generalissues_not_fixed
+
+## issue+excel+generalissues+notfixed+affirmanalyst
+> excel_generalissues_not_fixed
+* affirm
+ - utter_analyst_reply
+ - action_restart
+
+## issue+excel+generalissues+notfixed+denyanalyst
+> excel_generalissues_not_fixed
+* deny
+ - utter_goodbye
+ - action_restart
+
+## issue+aacrobat
+> issue_asked
+* problem_aacrobat
+ - utter_aacrobat_question 
+ > aacrobat_issue_asked
+
+## issue+aacrobat+deny
+> aacrobat_issue_asked
+* deny
+ - utter_further_help
+ > aacrobat_issue_ticket
+
+## issue+aacrobat+deny+affirm
+> aacrobat_issue_ticket
+* affirm
+ - utter_ticket_created_reply
+ - action_restart
+
+## issue+aacrobat+deny+deny
+> aacrobat_issue_ticket
+* deny
+ - utter_call_it
+ - action_restart
+
+## issue+aacrobat+affirm
+> aacrobat_issue_asked
+* affirm
+ - utter_generic_apology
+ - utter_aacrobat_options
+ > specific_aacrobat_issue
+
+## issue+aacrobat+affirm+other
+> specific_aacrobat_issue
+* issue_not_listed
+ - utter_issue_not_found
+ > other_ticket
+
+
+
+
+
+## issue+aacrobat+generalissues
+> specific_aacrobat_issue
+* problem_aacrobat_generalissues
+ - utter_aacrobat_generalissues
+ > aacrobat_generalissues_fixed_q
+
+## issue+aacrobat+generalissues+fixed
+> aacrobat_generalissues_fixed_q
+* affirm
+ - utter_goodbye
+ - action_restart
+
+## issue+aacrobat+generalissues+notfixed
+> aacrobat_generalissues_fixed_q
+* deny
+ - utter_ticket_reply
+ > aacrobat_generalissues_not_fixed
+
+## issue+aacrobat+generalissues+notfixed+affirmanalyst
+> aacrobat_generalissues_not_fixed
+* affirm
+ - utter_analyst_reply
+ - action_restart
+
+## issue+aacrobat+generalissues+notfixed+denyanalyst
+> aacrobat_generalissues_not_fixed
+* deny
+ - utter_goodbye
+ - action_restart

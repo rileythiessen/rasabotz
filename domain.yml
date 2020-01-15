@@ -43,6 +43,10 @@ intents:
 - problem_word_generalerrors
 - problem_powerpoint
 - problem_powerpoint_generalerrors
+- problem_excel
+- problem_excel_generalissues
+- problem_aacrobat
+- problem_aacrobat_generalissues
 
 templates:
   utter_greet:
@@ -413,7 +417,48 @@ templates:
       payload: /affirm
     - title: No
       payload: /deny
-
+  utter_excel_question:
+  - text: It appears that you are having an excel issue. Is this correct?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_excel_options:
+  - text: Please select the issue you are having from the list below.
+    buttons:
+    - title: General Excel Issues
+      payload: /problem_excel_generalissues
+    - title: My Issue Is Not Listed
+      payload: /issue_not_listed
+  utter_excel_generalissues:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/excelgeneralissues. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_aacrobat_question:
+  - text: It appears that you are having a Adobe Acrobat issue. Is this correct?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_aacrobat_options:
+  - text: Please select the issue you are having from the list below.
+    buttons:
+    - title: Adobe Acrobat General Issues
+      payload: /problem_aacrobat_generalissues
+    - title: My Issue Is Not Listed
+      payload: /issue_not_listed
+  utter_aacrobat_generalissues:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/aacrobatgeneralissues. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
 actions:
 - utter_greet
 - utter_generic_issue
@@ -469,3 +514,9 @@ actions:
 - utter_powerpoint_question
 - utter_powerpoint_options
 - utter_powerpoint_generalerrors
+- utter_excel_question
+- utter_excel_options
+- utter_excel_generalissues
+- utter_aacrobat_question
+- utter_aacrobat_options
+- utter_aacrobat_generalissues

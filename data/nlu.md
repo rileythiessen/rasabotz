@@ -184,6 +184,14 @@
 ## intent:problem_outlook_wopen
 ## intent:problem_outlook_password
 
+## intent:problem_word
+## intent:problem_word_generalerrors
+
+## intent:problem_powerpoint
+## intent:problem_powerpoint_generalerrors
+
+## intent:problem_excel
+## intent:problem_excel_generalissues
 
 
 ## intent:problem_phone
@@ -269,4 +277,4 @@
 - nty
 - nope
 - negative
-- No
+- Nothing
