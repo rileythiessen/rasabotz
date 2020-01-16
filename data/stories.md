@@ -3,11 +3,28 @@
  - utter_greet
  > ask_question
 
+## what can you do
+* bot_capabilities
+ - utter_greet
+ > ask_question
+
 ## issue
 > ask_question
 * generic_problem
  - utter_generic_issue
  > issue_asked
+
+## hwreq
+> ask_question
+* generic_software
+ - utter_generic_software
+ > software_asked
+
+## swreq
+> ask_question
+* generic_hardware
+ - utter_generic_hardware
+ > hardware_asked
 
 ## issue+monitor
 > issue_asked
@@ -1628,3 +1645,157 @@
 * deny
  - utter_goodbye
  - action_restart
+
+## issue+cam
+> issue_asked
+* problem_cam
+ - utter_cam_question 
+ > cam_issue_asked
+
+## issue+cam+deny
+> cam_issue_asked
+* deny
+ - utter_further_help
+ > cam_issue_ticket
+
+## issue+cam+deny+affirm
+> cam_issue_ticket
+* affirm
+ - utter_ticket_created_reply
+ - action_restart
+
+## issue+cam+deny+deny
+> cam_issue_ticket
+* deny
+ - utter_call_it
+ - action_restart
+
+## issue+cam+affirm
+> cam_issue_asked
+* affirm
+ - utter_generic_apology
+ - utter_cam_options
+ > specific_cam_issue
+
+## issue+cam+affirm+other
+> specific_cam_issue
+* issue_not_listed
+ - utter_issue_not_found
+ > other_ticket
+
+## issue+cam+broken
+> specific_cam_issue
+* problem_cam_broken
+ - utter_generic_broken
+ > broken_q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## swreq+adobeacrobat
+> software_asked
+* req_adobeacrobat
+ - utter_sw_adobeacrobat_question 
+ > swreq_asked
+
+
+
+## swreq+APPGENERAL+deny
+> swreq_asked
+* deny
+ - utter_further_help_sw
+ > swreq_ticket
+
+## swreq+APPGENERAL+affirm
+> swreq_asked
+* affirm
+ - utter_swhw_approved
+ - action_restart
+
+## swreq+GENERAL+deny+affirm
+> swreq_ticket
+* affirm
+ - utter_ticket_created_reply
+ - action_restart
+
+## swreq+APPGENERAL+deny+deny
+> swreq_ticket
+* deny
+ - utter_call_it
+ - action_restart
+
+## swreq+visio
+> software_asked
+* req_visio
+ - utter_sw_visio_question 
+ > swreq_asked_app
+
+## swreq+UNAPPGENERAL+deny
+> swreq_asked_app
+* deny
+ - utter_further_help_sw
+ > swreq_ticket
+
+## swreq+UNAPPGENERAL+affirm
+> swreq_asked_app
+* affirm
+ - utter_swhw_needsapp
+ > approval_question
+
+## swreq+UNAPPGENERAL+affirm+affirm
+> approval_question
+* affirm
+ - utter_swhw_hasapp
+ - action_restart
+
+## swreqUNAPPGENERAL+affirm+deny
+> approval_question
+* deny
+ - utter_swhw_noapp
+ - action_restart
+
+## swreq+slack
+> software_asked
+* req_slack
+ - utter_sw_slack_question 
+ > swreq_asked
+
+## hwreq+keyboard
+> hardware_asked
+* req_keyboard
+ - utter_hw_keyboard_question 
+ > hwreq_asked
+
+## hwreq+APPGENERAL+deny
+> hwreq_asked
+* deny
+ - utter_further_help_hw
+ > swreq_ticket
+
+## hwreq+APPGENERAL+affirm
+> hwreq_asked
+* affirm
+ - utter_swhw_approved
+ - action_restart
+
+## hwreq+laptop
+> hardware_asked
+* req_laptop
+ - utter_hw_laptop_question 
+ > hwreq_asked
+
+## hwreq+desktop
+> hardware_asked
+* req_desktop
+ - utter_hw_desktop_question 
+ > hwreq_asked

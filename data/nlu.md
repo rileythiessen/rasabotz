@@ -14,8 +14,6 @@
 - Hello
 - Howdy
 
-## intent:generic_problem
-
 ## intent:bot_capabilities
 - what can you do?
 - what are you capable of?
@@ -23,7 +21,6 @@
 - what can you help me with
 - how many things can you help me with
 - i want to know how you can help me
-- what can you help me with
 - what is it that you can do
 - do you have any limitations
 
@@ -37,6 +34,25 @@
 - adios
 - byebye
 - take care
+
+## intent:req_adobeacrobat
+- I need adobe acrobat
+- I want adobe acrobat
+- I want acrobat
+- I need acrobat
+
+## intent:req_slack
+- I need slack
+- I want slack
+
+## intent:req_visio
+- I need adobe visio
+- I want adobe visio
+- I need microsoft visio
+
+## intent:req_keyboard
+- I need a new keyboard
+- I want a new keyboard
 
 ## intent:problem_monitor
 - I need help with my monitor
@@ -70,11 +86,9 @@
 - My second monitor keeps flickering
 - My second monitor keeps flickering...
 - Flickering issues with my monitor...
+- My monitor colour issues are not normal
 
-## intent:problem_monitor_flicker
-## intent:problem_monitor_broken
-
-## intent: problem_mouse
+## intent:problem_mouse
 - I need help with my mouse
 - There is an issue with my mouse
 - I am having problems with my mouse
@@ -93,8 +107,6 @@
 - My mouse doesn't work please help
 - For whatever reason, my mouse is not working
 - My mouse fell off my desk and is broken
-
-## intent:broken_mouse
 
 ## intent:problem_keyboard
 - I need help with my keyboard
@@ -116,8 +128,6 @@
 - For whatever reason, my keyboard is not working
 - My keyboard fell off my desk and is broken
 
-## intent:problem_keyboard_broken
-
 ## intent:problem_sound
 - my sound isn't working
 - sound not working
@@ -135,9 +145,6 @@
 - speaker problems
 - speaker issues
 
-## intent:problem_sound_nwork
-## intent:problem_sound_hw
-
 ## intent:problem_printer
 - The printer is not working.
 - The printer will not print
@@ -148,10 +155,6 @@
 - I get an error on the printer
 - It takes too long to print
 - Nothing happens when I try and print
-
-## intent:problem_printer_slow
-## intent:problem_printer_error
-## intent:problem_printer_missing
 
 ## intent:problem_vpn
 - I'm unable to connect to the vpn.
@@ -169,12 +172,7 @@
 - help me fix my entrust
 - my entrust app wont work
 - entrust code doesnt work
-
-## intent:problem_vpn_connection
-## intent:problem_vpn_entrust
-
-## intent:problem_mykey
-## intent:problem_mykey_general
+- I am having a hard time with entrust
 
 ## intent:problem_outlook
 - I need help with my outlook
@@ -192,14 +190,12 @@
 - Outlook is being slow
 - Emails are being slow
 - can't receive email
-- I can’t see my team’s shared calendar 
+- I can’t see my team’s shared calendar
 - I can’t see my old emails
-- My emails disappeared 
+- My emails disappeared
 - The outlook ribbon is missing
 - Where did my emails go
-
-## intent:problem_outlook_wopen
-## intent:problem_outlook_password
+- My outlook keeps asking for a psaasword!!!!
 
 ## intent:problem_word
 - I cant access word
@@ -217,8 +213,6 @@
 - Word has become unclickable
 - I wish I didn’t have to use word
 
-## intent:problem_word_generalerrors
-
 ## intent:problem_powerpoint
 - My powerpoint presentation wont open
 - my powerpoint wont open
@@ -234,9 +228,8 @@
 - I’m trying to create a presentation but the program isn’t working
 - My slides aren’t working the way they are supposed to
 - I can’t open my presentation
-
-
-## intent:problem_powerpoint_generalerrors
+- My presentation won't open :(
+- I can't open my presentation :(
 
 ## intent:problem_excel
 - My excel document wont open
@@ -250,10 +243,8 @@
 - My formulas aren’t working in excel
 - My formulas in excel aren’t working
 
-## intent:problem_excel_generalissues
-
 ## intent:problem_aacrobat
-- I cannot open a PDF file on a webpage 
+- I cannot open a PDF file on a webpage
 - I cannot open a PDF file that is attached to an e-mail
 - I cannot open a PDF on my computer
 - I cant edit a PDF file
@@ -266,14 +257,12 @@
 - My PDFs are opening on a webpage, I want them to open with Adobe
 - My PDF comes up in a browser, how can I get it to open in the reader
 
-## intent:problem_aacrobat_generalissues
-
 ## intent:problem_phone
 - My phone isn't working
 - I need a password reset on my phone
 - My phone password won't work
 - My phone password will not work
-- My email doesnt work on my phone 
+- My email doesnt work on my phone
 - I can’t receive emails on my phone
 - I can’t send emails on my phone
 - My phone won’t connect to the network
@@ -289,8 +278,6 @@
 - How do I replace my phone
 - How do I get a new phone
 - What am I allowed to do with my device
-- I can’t receive emails on my phone
-- I can’t send emails on my phone
 - I can’t see my emails on my phone
 - My phone isn’t displaying my emails
 - People aren’t getting emails I send from my phone
@@ -301,10 +288,10 @@
 - I’m locked out of my phone
 - I can’t get into my phone
 - I think someone locked me out of my phone
-
-
-## intent:problem_phone_password
-## intent:problem_phone_broken
+- my email on my phone is not working
+- my phone is not sending emails
+- Phone email problems
+- I am having a phone issue
 
 ## intent:problem_skype
 - My lync isn't working
@@ -320,9 +307,6 @@
 - I can’t see my contacts on Skype
 - Skype isn’t loading
 - Skype is offline
-
-## intent:problem_skype_login
-## intent:problem_skype_msgs
 
 ## intent:problem_sas
 - my sas isnt working
@@ -348,7 +332,6 @@
 - my slack channel is broken
 - how do i join a slack channel
 
-## intent:problem_slack_general
 ## intent:problem_jabber
 - my jabber isnt working
 - my jabber isnt functioning
@@ -374,8 +357,6 @@
 - Can you restore jabber
 - Why cant I use jabber
 
-## intent:problem_jabber_error
-
 ## intent:problem_browser
 - Edge has frozen
 - Chrome has frozen
@@ -389,11 +370,11 @@
 - I can’t open pop-ups
 - My pop-ups are blocked
 - My favourites have disappeared
-- Why can’t i open some web applications 
+- Why can’t i open some web applications
 - Why cant i open some websites
 - How do i disable pop-up blocker
 - I keep clicking on a link and nothing happens
-- I am getting an error message that i need to allow pop-us 
+- I am getting an error message that i need to allow pop-us
 - I am getting an error message that i need to disable my popup blocker
 - My toolbar disappeared in firefox
 - My toolbar disappeared in ie
@@ -402,12 +383,23 @@
 - My toolbar disappeared in internet explorer
 - My firewall is blocking a website
 
-## intent:problem_browser_general
-## intent:problem_browser_edge
-## intent:problem_browser_firefox
-## intent:problem_browser_ie
-## intent:problem_browser_chrome
-## intent:problem_sas_general
+## intent:problem_cam
+- my webcam isnt working
+- my webcam isnt functioning
+- webcam wont work
+- webcam isnt working properly
+- why wont webcam work
+- my webcam aint working
+- webcam isnt loading
+- webcam wont load
+- I'm having problems with webcam
+- My webcam keeps freezing
+- I can't connect to webcam
+- I can't see webcam
+- I can't use webcam
+- webcam is unresponsive
+- Why can't I use webcam
+- My webcam is broken
 
 ## intent:problem_drives
 - I can’t connect to my drives
@@ -427,12 +419,6 @@
 - Can you restore my files
 - Can you bring back my documents
 
-## intent:problem_drives_connect
-## intent:problem_drives_files
-
-
-## intent:issue_not_listed
-
 ## intent:need_analyst
 - I need an analyst
 - I need to speak to someone
@@ -441,6 +427,22 @@
 - Please add an analyst into the chat
 - I would like to speak with someone live
 - I would like to talk to someone live
+
+## intent:req_laptop
+- I need a new laptop
+- My laptop is really slow can I get a new one
+- I require a new laptop
+- Need faster laptop
+- Laptop too slow need new pl0x
+- need new laptop
+
+## intent:req_desktop
+- I need a new desktop
+- My ladesktopptop is really slow can I get a new one
+- I require a new desktop
+- Need faster desktop
+- desktop too slow need new please
+- need new desktop
 
 ## intent:ticket_creation
 - I want a ticket to be created
