@@ -1101,3 +1101,530 @@
 * deny
  - utter_goodbye
  - action_restart
+
+## issue+skype+msgs
+> specific_skype_issue
+* problem_skype_msgs
+ - utter_skype_msgs
+ > skype_msgs_fixed_q
+
+## issue+skype+msgs+fixed
+> skype_msgs_fixed_q
+* affirm
+ - utter_goodbye
+ - action_restart
+
+## issue+skype+msgs+notfixed
+> skype_msgs_fixed_q
+* deny
+ - utter_ticket_reply
+ > skype_msgs_not_fixed
+
+## issue+skype+msgs+notfixed+affirmanalyst
+> skype_msgs_not_fixed
+* affirm
+ - utter_analyst_reply
+ - action_restart
+
+## issue+skype+msgs+notfixed+denyanalyst
+> skype_msgs_not_fixed
+* deny
+ - utter_goodbye
+ - action_restart
+
+## issue+sas
+> issue_asked
+* problem_sas
+ - utter_sas_question 
+ > sas_issue_asked
+
+## issue+sas+deny
+> sas_issue_asked
+* deny
+ - utter_further_help
+ > sas_issue_ticket
+
+## issue+sas+deny+affirm
+> sas_issue_ticket
+* affirm
+ - utter_ticket_created_reply
+ - action_restart
+
+## issue+sas+deny+deny
+> sas_issue_ticket
+* deny
+ - utter_call_it
+ - action_restart
+
+## issue+sas+affirm
+> sas_issue_asked
+* affirm
+ - utter_generic_apology
+ - utter_sas_options
+ > specific_sas_issue
+
+## issue+sas+affirm+other
+> specific_sas_issue
+* issue_not_listed
+ - utter_issue_not_found
+ > other_ticket
+
+## issue+sas+general
+> specific_sas_issue
+* problem_sas_general
+ - utter_sas_general
+ > sas_general_fixed_q
+
+## issue+sas+general+fixed
+> sas_general_fixed_q
+* affirm
+ - utter_goodbye
+ - action_restart
+
+## issue+sas+general+notfixed
+> sas_general_fixed_q
+* deny
+ - utter_ticket_reply
+ > sas_general_not_fixed
+
+## issue+sas+general+notfixed+affirmanalyst
+> sas_general_not_fixed
+* affirm
+ - utter_analyst_reply
+ - action_restart
+
+## issue+sas+general+notfixed+denyanalyst
+> sas_general_not_fixed
+* deny
+ - utter_goodbye
+ - action_restart
+
+## issue+slack
+> issue_asked
+* problem_slack
+ - utter_slack_question 
+ > slack_issue_asked
+
+## issue+slack+deny
+> slack_issue_asked
+* deny
+ - utter_further_help
+ > slack_issue_ticket
+
+## issue+slack+deny+affirm
+> slack_issue_ticket
+* affirm
+ - utter_ticket_created_reply
+ - action_restart
+
+## issue+slack+deny+deny
+> slack_issue_ticket
+* deny
+ - utter_call_it
+ - action_restart
+
+## issue+slack+affirm
+> slack_issue_asked
+* affirm
+ - utter_generic_apology
+ - utter_slack_options
+ > specific_slack_issue
+
+## issue+slack+affirm+other
+> specific_slack_issue
+* issue_not_listed
+ - utter_issue_not_found
+ > other_ticket
+
+
+
+
+
+## issue+slack+general
+> specific_slack_issue
+* problem_slack_general
+ - utter_slack_general
+ > slack_general_fixed_q
+
+## issue+slack+general+fixed
+> slack_general_fixed_q
+* affirm
+ - utter_goodbye
+ - action_restart
+
+## issue+slack+general+notfixed
+> slack_general_fixed_q
+* deny
+ - utter_ticket_reply
+ > slack_general_not_fixed
+
+## issue+slack+general+notfixed+affirmanalyst
+> slack_general_not_fixed
+* affirm
+ - utter_analyst_reply
+ - action_restart
+
+## issue+slack+general+notfixed+denyanalyst
+> slack_general_not_fixed
+* deny
+ - utter_goodbye
+ - action_restart
+
+## issue+drives
+> issue_asked
+* problem_drives
+ - utter_drives_question 
+ > drives_issue_asked
+
+## issue+drives+deny
+> drives_issue_asked
+* deny
+ - utter_further_help
+ > drives_issue_ticket
+
+## issue+drives+deny+affirm
+> drives_issue_ticket
+* affirm
+ - utter_ticket_created_reply
+ - action_restart
+
+## issue+drives+deny+deny
+> drives_issue_ticket
+* deny
+ - utter_call_it
+ - action_restart
+
+## issue+drives+affirm
+> drives_issue_asked
+* affirm
+ - utter_generic_apology
+ - utter_drives_options
+ > specific_drives_issue
+
+## issue+drives+affirm+other
+> specific_drives_issue
+* issue_not_listed
+ - utter_issue_not_found
+ > other_ticket
+
+
+
+
+
+## issue+drives+connect
+> specific_drives_issue
+* problem_drives_connect
+ - utter_drives_connect
+ > drives_connect_fixed_q
+
+## issue+drives+connect+fixed
+> drives_connect_fixed_q
+* affirm
+ - utter_goodbye
+ - action_restart
+
+## issue+drives+connect+notfixed
+> drives_connect_fixed_q
+* deny
+ - utter_ticket_reply
+ > drives_connect_not_fixed
+
+## issue+drives+connect+notfixed+affirmanalyst
+> drives_connect_not_fixed
+* affirm
+ - utter_analyst_reply
+ - action_restart
+
+## issue+drives+connect+notfixed+denyanalyst
+> drives_connect_not_fixed
+* deny
+ - utter_goodbye
+ - action_restart
+
+## issue+drives+files
+> specific_drives_issue
+* problem_drives_files
+ - utter_drives_files
+ > drives_files_fixed_q
+
+## issue+drives+files+fixed
+> drives_files_fixed_q
+* affirm
+ - utter_goodbye
+ - action_restart
+
+## issue+drives+files+notfixed
+> drives_files_fixed_q
+* deny
+ - utter_ticket_reply
+ > drives_files_not_fixed
+
+## issue+drives+files+notfixed+affirmanalyst
+> drives_files_not_fixed
+* affirm
+ - utter_analyst_reply
+ - action_restart
+
+## issue+drives+files+notfixed+denyanalyst
+> drives_files_not_fixed
+* deny
+ - utter_goodbye
+ - action_restart
+
+## issue+jabber
+> issue_asked
+* problem_jabber
+ - utter_jabber_question 
+ > jabber_issue_asked
+
+## issue+jabber+deny
+> jabber_issue_asked
+* deny
+ - utter_further_help
+ > jabber_issue_ticket
+
+## issue+jabber+deny+affirm
+> jabber_issue_ticket
+* affirm
+ - utter_ticket_created_reply
+ - action_restart
+
+## issue+jabber+deny+deny
+> jabber_issue_ticket
+* deny
+ - utter_call_it
+ - action_restart
+
+## issue+jabber+affirm
+> jabber_issue_asked
+* affirm
+ - utter_generic_apology
+ - utter_jabber_options
+ > specific_jabber_issue
+
+## issue+jabber+affirm+other
+> specific_jabber_issue
+* issue_not_listed
+ - utter_issue_not_found
+ > other_ticket
+
+## issue+jabber+error
+> specific_jabber_issue
+* problem_jabber_error
+ - utter_jabber_error
+ > jabber_error_fixed_q
+
+## issue+jabber+error+fixed
+> jabber_error_fixed_q
+* affirm
+ - utter_goodbye
+ - action_restart
+
+## issue+jabber+error+notfixed
+> jabber_error_fixed_q
+* deny
+ - utter_ticket_reply
+ > jabber_error_not_fixed
+
+## issue+jabber+error+notfixed+affirmanalyst
+> jabber_error_not_fixed
+* affirm
+ - utter_analyst_reply
+ - action_restart
+
+## issue+jabber+error+notfixed+denyanalyst
+> jabber_error_not_fixed
+* deny
+ - utter_goodbye
+ - action_restart
+
+## issue+browser
+> issue_asked
+* problem_browser
+ - utter_browser_question 
+ > browser_issue_asked
+
+## issue+browser+deny
+> browser_issue_asked
+* deny
+ - utter_further_help
+ > browser_issue_ticket
+
+## issue+browser+deny+affirm
+> browser_issue_ticket
+* affirm
+ - utter_ticket_created_reply
+ - action_restart
+
+## issue+browser+deny+deny
+> browser_issue_ticket
+* deny
+ - utter_call_it
+ - action_restart
+
+## issue+browser+affirm
+> browser_issue_asked
+* affirm
+ - utter_generic_apology
+ - utter_browser_options
+ > specific_browser_issue
+
+## issue+browser+affirm+other
+> specific_browser_issue
+* issue_not_listed
+ - utter_issue_not_found
+ > other_ticket
+
+
+
+
+
+## issue+browser+general
+> specific_browser_issue
+* problem_browser_general
+ - utter_browser_general
+ > browser_general_fixed_q
+
+## issue+browser+general+fixed
+> browser_general_fixed_q
+* affirm
+ - utter_goodbye
+ - action_restart
+
+## issue+browser+general+notfixed
+> browser_general_fixed_q
+* deny
+ - utter_ticket_reply
+ > browser_general_not_fixed
+
+## issue+browser+general+notfixed+affirmanalyst
+> browser_general_not_fixed
+* affirm
+ - utter_analyst_reply
+ - action_restart
+
+## issue+browser+general+notfixed+denyanalyst
+> browser_general_not_fixed
+* deny
+ - utter_goodbye
+ - action_restart
+
+## issue+browser+edge
+> specific_browser_issue
+* problem_browser_edge
+ - utter_browser_edge
+ > browser_edge_fixed_q
+
+## issue+browser+edge+fixed
+> browser_edge_fixed_q
+* affirm
+ - utter_goodbye
+ - action_restart
+
+## issue+browser+edge+notfixed
+> browser_edge_fixed_q
+* deny
+ - utter_ticket_reply
+ > browser_edge_not_fixed
+
+## issue+browser+edge+notfixed+affirmanalyst
+> browser_edge_not_fixed
+* affirm
+ - utter_analyst_reply
+ - action_restart
+
+## issue+browser+edge+notfixed+denyanalyst
+> browser_edge_not_fixed
+* deny
+ - utter_goodbye
+ - action_restart
+
+## issue+browser+firefox
+> specific_browser_issue
+* problem_browser_firefox
+ - utter_browser_firefox
+ > browser_firefox_fixed_q
+
+## issue+browser+firefox+fixed
+> browser_firefox_fixed_q
+* affirm
+ - utter_goodbye
+ - action_restart
+
+## issue+browser+firefox+notfixed
+> browser_firefox_fixed_q
+* deny
+ - utter_ticket_reply
+ > browser_firefox_not_fixed
+
+## issue+browser+firefox+notfixed+affirmanalyst
+> browser_firefox_not_fixed
+* affirm
+ - utter_analyst_reply
+ - action_restart
+
+## issue+browser+firefox+notfixed+denyanalyst
+> browser_firefox_not_fixed
+* deny
+ - utter_goodbye
+ - action_restart
+
+## issue+browser+ie
+> specific_browser_issue
+* problem_browser_ie
+ - utter_browser_ie
+ > browser_ie_fixed_q
+
+## issue+browser+ie+fixed
+> browser_ie_fixed_q
+* affirm
+ - utter_goodbye
+ - action_restart
+
+## issue+browser+ie+notfixed
+> browser_ie_fixed_q
+* deny
+ - utter_ticket_reply
+ > browser_ie_not_fixed
+
+## issue+browser+ie+notfixed+affirmanalyst
+> browser_ie_not_fixed
+* affirm
+ - utter_analyst_reply
+ - action_restart
+
+## issue+browser+ie+notfixed+denyanalyst
+> browser_ie_not_fixed
+* deny
+ - utter_goodbye
+ - action_restart
+
+## issue+browser+chrome
+> specific_browser_issue
+* problem_browser_chrome
+ - utter_browser_chrome
+ > browser_chrome_fixed_q
+
+## issue+browser+chrome+fixed
+> browser_chrome_fixed_q
+* affirm
+ - utter_goodbye
+ - action_restart
+
+## issue+browser+chrome+notfixed
+> browser_chrome_fixed_q
+* deny
+ - utter_ticket_reply
+ > browser_chrome_not_fixed
+
+## issue+browser+chrome+notfixed+affirmanalyst
+> browser_chrome_not_fixed
+* affirm
+ - utter_analyst_reply
+ - action_restart
+
+## issue+browser+chrome+notfixed+denyanalyst
+> browser_chrome_not_fixed
+* deny
+ - utter_goodbye
+ - action_restart

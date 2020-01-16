@@ -14,7 +14,6 @@
 - Hello
 - Howdy
 
-
 ## intent:generic_problem
 
 ## intent:bot_capabilities
@@ -120,6 +119,22 @@
 ## intent:problem_keyboard_broken
 
 ## intent:problem_sound
+- my sound isn't working
+- sound not working
+- sound not functioning
+- Sound isn't coming out of my speakers
+- Why isn't my sound working
+- why isn't my sound functioning
+- I can’t hear anything from my computer
+- my speakers aren't working
+- my volume isn't working
+- sound not loud
+- sound too quiet
+- sound problems
+- volume problems
+- speaker problems
+- speaker issues
+
 ## intent:problem_sound_nwork
 ## intent:problem_sound_hw
 
@@ -215,6 +230,11 @@
 - I wish I didn’t have to use powerpoint
 - Everything formatted on me in powerpoint
 - Presentation mode isn’t working correctly in powerpoint
+- Powerpoint is being buggy
+- I’m trying to create a presentation but the program isn’t working
+- My slides aren’t working the way they are supposed to
+- I can’t open my presentation
+
 
 ## intent:problem_powerpoint_generalerrors
 
@@ -227,6 +247,8 @@
 - All my microsoft programs have froze
 - I already have excel open and I’m trying to open another document, but it wont work
 - I wish I didn’t have to use Excel
+- My formulas aren’t working in excel
+- My formulas in excel aren’t working
 
 ## intent:problem_excel_generalissues
 
@@ -285,7 +307,128 @@
 ## intent:problem_phone_broken
 
 ## intent:problem_skype
+- My lync isn't working
+- my skype isn't working
+- skype wont work
+- lync wont work
+- I cant send messages on lync
+- i cant send msgs on skype
+- skype status are wrong
+- skype isnt working properly
+- why wont skype work
+- my skype aint working
+- I can’t see my contacts on Skype
+- Skype isn’t loading
+- Skype is offline
+
 ## intent:problem_skype_login
+## intent:problem_skype_msgs
+
+## intent:problem_sas
+- my sas isnt working
+- my sas isnt functioning
+- saswont work
+- sas isnt working properly
+- why wont sas work
+- my sas aint working
+- i get an error when opening sas
+- sas isnt loading
+- sas wont load
+
+## intent:problem_slack
+- my slack isnt working
+- my slack isnt functioning
+- slackwont work
+- slack isnt working properly
+- why wont slack work
+- my slack aint working
+- i get an error when opening slack
+- slack isnt loading
+- slack wont load
+- my slack channel is broken
+- how do i join a slack channel
+
+## intent:problem_slack_general
+## intent:problem_jabber
+- my jabber isnt working
+- my jabber isnt functioning
+- jabberwont work
+- jabber isnt working properly
+- why wont jabber work
+- my jabber aint working
+- i get an error when opening jabber
+- jabber isnt loading
+- jabber wont load
+- Im having problems with jabber
+- My jabber is missing
+- My jabber keeps freezing
+- My jabberis slow
+- I cant open jabber
+- I cant connect to jabber
+- I cant see jabber
+- I cant use jabber
+- I cant find jabber
+- jabber is unresponsive
+- Where did jabber go
+- I lost jabber
+- Can you restore jabber
+- Why cant I use jabber
+
+## intent:problem_jabber_error
+
+## intent:problem_browser
+- Edge has frozen
+- Chrome has frozen
+- Firefox has frozen
+- ie has frozen
+- Internet explorer has frozen
+- Explorer has frozen
+- I can’t open the internet
+- The internet browser isn’t opening
+- I’m stuck on the same webpage
+- I can’t open pop-ups
+- My pop-ups are blocked
+- My favourites have disappeared
+- Why can’t i open some web applications 
+- Why cant i open some websites
+- How do i disable pop-up blocker
+- I keep clicking on a link and nothing happens
+- I am getting an error message that i need to allow pop-us 
+- I am getting an error message that i need to disable my popup blocker
+- My toolbar disappeared in firefox
+- My toolbar disappeared in ie
+- My toolbar disappeared in chrome
+- My toolbar disappeared in edge
+- My toolbar disappeared in internet explorer
+- My firewall is blocking a website
+
+## intent:problem_browser_general
+## intent:problem_browser_edge
+## intent:problem_browser_firefox
+## intent:problem_browser_ie
+## intent:problem_browser_chrome
+## intent:problem_sas_general
+
+## intent:problem_drives
+- I can’t connect to my drives
+- My shared drive doesn't appear
+- I am missing my common drives
+- My documents disappeared
+- I can’t see my files
+- I cant see my files
+- Where did my files go
+- I’m not sure where my file went
+- I think I might have lost my documents
+- My documents are not where they are supposed to be
+- Is it possible that my documents might have been deleted
+- I haven’t touched my documents but they are missing
+- My documents were here yesterday and as of this morning are gone
+- I logged in to find my documents missing
+- Can you restore my files
+- Can you bring back my documents
+
+## intent:problem_drives_connect
+## intent:problem_drives_files
 
 
 ## intent:issue_not_listed

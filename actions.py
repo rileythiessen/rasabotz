@@ -7,10 +7,10 @@
 
 # This is a simple example for a custom action which utters "Hello World!"
 
-# from typing import Any, Text, Dict, List
+from typing import Any, Text, Dict, List
 #
-# from rasa_sdk import Action, Tracker
-# from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
 # #
 # #
 # class ActionReturnQuestion(Action):
@@ -25,3 +25,31 @@
 #         dispatcher.utter_message(text="test")
 #
 #         return []
+
+class ActionSetIntents(Action):
+	def name(self):
+		return "action_set_intents"
+
+	def run(self,dispatcher,tracker,domain):
+
+		intent_current = tracker.latest_message['intent'].get('name')
+		return[SlotSet("intents",intent_current)]
+
+# class ActionSaveIntent(Action):
+
+# 	def name(self) -> Text:
+# 		return "action_saveIntent"
+
+# 	def run(self, dispatcher, tracker, domain):
+
+# 		intent = tracker.latest_message['intent'].get('name')
+# 		return [SlotSet('cur_context', intent)]
+
+# class ActionGetDetails(Action):
+
+#     def name(self) -> Text:
+#         return "action_getDetails"
+
+#     def run(self, dispatcher, tracker, domain):
+#         # CALLING THE ActionSaveIntent.run METHOD and storing the data in intent variable
+#         intent = tracker.get_slot("cur_context")

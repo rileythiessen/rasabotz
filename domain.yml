@@ -48,17 +48,36 @@ intents:
 - problem_aacrobat_generalissues
 - problem_skype
 - problem_skype_login
+- problem_skype_msgs
+- problem_sas
+- problem_sas_general
+- problem_slack
+- problem_slack_general
+- problem_drives
+- problem_drives_connect
+- problem_drives_files
+- problem_jabber
+- problem_jabber_error
+- problem_browser
+- problem_browser_general
+- problem_browser_edge
+- problem_browser_firefox
+- problem_browser_chrome
+- problem_browser_ie
+
+
+
 templates:
   utter_greet:
-  - text: Hello AAFC Employee. I am a chatbot designed to help you I can currently
-      help with any of the issues below. Please select one.
+  - text: Hi I am Agrit, I am the Agriculture and Agri-Foods Canada IT Bot. How can
+      I help you today?
     buttons:
     - title: I am having an issue
       payload: /generic_problem
     - title: I need hardware
       payload: /generic_hardware
     - title: I need software
-      payload: /generic_software
+      payload: /generic_software  
   utter_generic_issue:
   - text: It appears you've identified that you're having an issue. Can you please
       provide me with more info so I can help you further.
@@ -195,7 +214,8 @@ templates:
       payload: /deny
   utter_call_it:
   - text: A ticket will not be created. If you would like to speak to IT support directly,
-      please call 555-555-5555.
+      please call 555-555-5555. Please greet me if you would like to start this conversation
+      again.
   utter_ticket_created_reply:
   - text: A ticket has been created for you (SXXXXXX) and assigned to your nearest
       analyst. The details will be emailed to you shortly. For any further bot assistance
@@ -475,6 +495,164 @@ templates:
       payload: /affirm
     - title: No
       payload: /deny
+  utter_skype_msgs:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/skypemsgs. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_sas_question:
+  - text: It appears that you are having a SAS issue. Is this correct?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_sas_options:
+  - text: Please select the issue you are having from the list below.
+    buttons:
+    - title: SAS General Issues (All)
+      payload: /problem_sas_general
+    - title: My Issue Is Not Listed
+      payload: /issue_not_listed
+  utter_sas_general:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/sasgeneral. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_slack_question:
+  - text: It appears that you are having a slack issue. Is this correct?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_slack_options:
+  - text: Please select the issue you are having from the list below.
+    buttons:
+    - title: Slack General Issues (All)
+      payload: /problem_slack_general
+    - title: My Issue Is Not Listed
+      payload: /issue_not_listed
+  utter_slack_general:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/slackgeneral. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_drives_question:
+  - text: It appears that you are having a Network Drive/File issue. Is this correct?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_drives_options:
+  - text: Please select the issue you are having from the list below.
+    buttons:
+    - title: Network Drive Issue
+      payload: /problem_drives_connect
+    - title: File Recovery
+      payload: /problem_drives_files
+    - title: My Issue Is Not Listed
+      payload: /issue_not_listed
+  utter_drives_connect:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/drivesconnect. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_drives_files:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/drivesfiles. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_jabber_question:
+  - text: It appears that you are having a Jabber issue. Is this correct?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_jabber_options:
+  - text: Please select the issue you are having from the list below.
+    buttons:
+    - title: Jabber Error
+      payload: /problem_jabber_error
+    - title: My Issue Is Not Listed
+      payload: /issue_not_listed
+  utter_jabber_error:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/jabbererror. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_browser_question:
+  - text: It appears that you are having a browser issue. Is this correct?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_browser_options:
+  - text: Please select the issue you are having from the list below.
+    buttons:
+    - title: General Browser Issues
+      payload: /problem_browser_general
+    - title: Firefox 
+      payload: /problem_browser_firefox
+    - title: Chrome 
+      payload: /problem_browser_chrome
+    - title: Edge 
+      payload: /problem_browser_edge
+    - title: Internet Explorer 
+      payload: /problem_browser_ie
+    - title: My Issue Is Not Listed
+      payload: /issue_not_listed
+  utter_browser_general:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/browsergeneral. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_browser_edge:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/browseredge. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_browser_firefox:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/browserfirefox. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_browser_ie:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/browserie. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_browser_chrome:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found at http://ourkb.com/browserchrome. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+
 actions:
 - utter_greet
 - utter_generic_issue
@@ -537,3 +715,24 @@ actions:
 - utter_skype_question
 - utter_skype_options
 - utter_skype_login
+- utter_skype_msgs
+- utter_sas_question
+- utter_sas_options
+- utter_sas_general
+- utter_slack_question
+- utter_slack_options
+- utter_slack_general
+- utter_drives_question
+- utter_drives_options
+- utter_drives_connect
+- utter_drives_files
+- utter_jabber_question
+- utter_jabber_options
+- utter_jabber_error
+- utter_browser_question
+- utter_browser_options
+- utter_browser_general
+- utter_browser_edge
+- utter_browser_ie
+- utter_browser_firefox
+- utter_browser_chrome
