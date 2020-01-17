@@ -14,6 +14,21 @@
 - Hello
 - Howdy
 
+## intent:req_monitor
+- I need a second monitor
+- I am requesting a new monitor
+- I would like a new screen
+- I need a new screen
+- I need a new monitor
+- my montior sucks I need a new one
+- my monitor is broken I need a new one
+- I require a new monitor
+- I am requesting a second monitor
+- I am requesting a new screen
+- I am requesting a screen
+- Can I have a new monitor
+- Can I have a screen
+
 ## intent:bot_capabilities
 - what can you do?
 - what are you capable of?
@@ -45,10 +60,21 @@
 - I need slack
 - I want slack
 
+## intent:more_info
+- I need more info
+- I require more info
+- Give me more info
+- Please give me more info
+
 ## intent:req_visio
-- I need adobe visio
-- I want adobe visio
+- I need visio
+- I want visio
 - I need microsoft visio
+- I require visio
+- I require microsoft visio
+- I would like microsoft visio
+- I would like visio
+- My computer isnt working, I would like microsoft visio
 
 ## intent:req_keyboard
 - I need a new keyboard
@@ -144,6 +170,17 @@
 - volume problems
 - speaker problems
 - speaker issues
+- my soundbar isnt working
+- my sound bar doesnt work
+- my laptop micro wont work
+- my microphone isnt working
+- my desktop mic isnt working
+- my mic isnt working
+- my micro isnt working
+- my microphone isnt working
+- my audio wont work
+- my audio isnt working
+- there is no audio on my laptop
 
 ## intent:problem_printer
 - The printer is not working.
@@ -259,12 +296,15 @@
 
 ## intent:generic_problem
 - I am having an issue
+- There is an issue
 
 ## intent:generic_hardware
 - Request for new hardware
+- I need new hardware
 
 ## intent:generic_software
 - Request for new software
+- I need new software
 
 ## intent:problem_cam_broken
 - My webcam is broken

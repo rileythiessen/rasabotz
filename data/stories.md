@@ -8,6 +8,26 @@
  - utter_greet
  > ask_question
 
+## goodbye+options
+* goodbye
+ - utter_greet
+ > ask_question
+
+## issue2
+* generic_problem
+ - utter_generic_issue
+ > issue_asked
+
+## hwreq2
+* generic_hardware
+ - utter_generic_hardware
+ > hardware_asked
+
+## swreq2
+* generic_software
+ - utter_generic_software
+ > software_asked
+
 ## issue
 > ask_question
 * generic_problem
@@ -25,6 +45,17 @@
 * generic_hardware
  - utter_generic_hardware
  > hardware_asked
+
+## moreinfo
+> ask_question
+* more_info
+ - utter_more_info
+ > ask_question
+
+## moreinfo2
+* more_info
+ - utter_more_info
+ > ask_question
 
 ## issue+monitor
 > issue_asked
@@ -1835,3 +1866,9 @@
 * req_chrome
  - utter_sw_chrome_question 
  > swreq_asked_app
+
+## hwreq+monitor
+> hardware_asked
+* req_monitor
+ - utter_hw_monitor_question 
+ > hwreq_asked

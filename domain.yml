@@ -74,10 +74,46 @@ intents:
 - req_desktop
 - problem_outlook_send
 - req_chrome
+- more_info
+- req_monitor
 templates:
   utter_greet:
   - text: Hi I am Agrit, I am the Agriculture and Agri-Food Canada IT Bot. How can
       I help you today?
+    buttons:
+    - title: I am having an issue
+      payload: I am having an issue
+    - title: Request for new hardware
+      payload: Request for new hardware
+    - title: Request for new software
+      payload: Request for new software
+    - title: I am confused (More info)
+      payload: I need more info
+  utter_default:
+  - text: Hi I am Agrit, I am the Agriculture and Agri-Food Canada IT Bot. How can
+      I help you today?
+    buttons:
+    - title: I am having an issue
+      payload: I am having an issue
+    - title: Request for new hardware
+      payload: Request for new hardware
+    - title: Request for new software
+      payload: Request for new software
+    - title: I am confused (More info)
+      payload: I need more info
+  utter_more_info:
+  - text: "Hi I am Agrit, I am a bot designed to help the clients of Agriculture and\
+      \ Agri-Food Canada. Currently I am here to help you if you are having any problems,\
+      \ or if you require any software or hardware. To help you select from the options\
+      \ below let me give you a little bit of information about each. \n**I am having\
+      \ an issue** is the button you should be selecting if you are having any problems\
+      \ at all. It does not matter if you problem is related to your hardware (for\
+      \ example your keyboard is physically broken) or your software (adobe acrobat\
+      \ is givving you errors with pdfs).\n**Requesting new hardware** is for when\
+      \ you need something new such as an ergonomic keyboard or mouse.\n**Requesting\
+      \ new software** is for when you need additional software that you don't currently\
+      \ have. You should not be clicking this button if your adobe acrobat is slow\
+      \ when reading your pdf files as that would be an issue."
     buttons:
     - title: I am having an issue
       payload: I am having an issue
@@ -787,6 +823,13 @@ templates:
       payload: Yes
     - title: No
       payload: No
+  utter_hw_monitor_question:
+  - text: It appears you are requesting a monitor. Is this correct?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny  
 actions:
 - utter_greet
 - utter_generic_issue
@@ -887,3 +930,5 @@ actions:
 - utter_hw_desktop_question
 - utter_outlook_send
 - utter_sw_chrome_question
+- utter_more_info
+- utter_hw_monitor_question
