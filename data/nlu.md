@@ -195,7 +195,9 @@
 - My emails disappeared
 - The outlook ribbon is missing
 - Where did my emails go
-- My outlook keeps asking for a psaasword!!!!
+- My outlook keeps asking for a psaasword!!
+
+## intent:problem_outlook_send
 
 ## intent:problem_word
 - I cant access word
@@ -242,6 +244,33 @@
 - I wish I didn’t have to use Excel
 - My formulas aren’t working in excel
 - My formulas in excel aren’t working
+
+## intent:req_chrome
+- I am requesting google chrome
+- I need chrome
+- I need the google browser
+- I would like to get chrome
+- I want chrome
+- I need google chrome
+- Please can I have google chrome
+- How do I get google chrome?
+- I want google chrome
+- Please give me chrome
+
+## intent:generic_problem
+- I am having an issue
+
+## intent:generic_hardware
+- Request for new hardware
+
+## intent:generic_software
+- Request for new software
+
+## intent:problem_cam_broken
+- My webcam is broken
+
+## intent:issue_not_listed
+- It is not listed
 
 ## intent:problem_aacrobat
 - I cannot open a PDF file on a webpage
@@ -466,6 +495,8 @@
 - definitely
 - Yes it is
 - Yes
+- Yep
+- Yessir
 
 ## intent:deny
 - no

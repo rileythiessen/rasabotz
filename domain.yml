@@ -72,17 +72,19 @@ intents:
 - issue_not_listed
 - req_laptop
 - req_desktop
+- problem_outlook_send
+- req_chrome
 templates:
   utter_greet:
   - text: Hi I am Agrit, I am the Agriculture and Agri-Food Canada IT Bot. How can
       I help you today?
     buttons:
     - title: I am having an issue
-      payload: /generic_problem
-    - title: I need hardware
-      payload: /generic_hardware
-    - title: I need software
-      payload: /generic_software
+      payload: I am having an issue
+    - title: Request for new hardware
+      payload: Request for new hardware
+    - title: Request for new software
+      payload: Request for new software
   utter_generic_issue:
   - text: It appears you've identified that you're having an issue. Can you please
       provide me with more info so I can help you further.
@@ -96,9 +98,9 @@ templates:
   - text: It appears that you are having a monitor issue is this correct?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_swhw_approved:
   - text: Your request has been approved and ticket (SXXXXXX) has been created and
       assigned to a technician. For further assistance please greet me again.
@@ -107,9 +109,9 @@ templates:
       you need Manager approval. Do you have the adequate approval?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_swhw_hasapp:
   - text: Thank you. A ticket (SXXXXXX) has been created and assigned to a technician.
       Please be ready to provide proof of approval. For any further assistance please
@@ -121,16 +123,16 @@ templates:
   - text: It appears that you are having a keyboard issue is this correct?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_printer_question:
   - text: It appears that you are having a printer issue is this correct?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_generic_apology:
   - text: I am very sorry to hear that.
   utter_monitor_options:
@@ -141,14 +143,14 @@ templates:
     - title: Broken Monitor
       payload: /problem_monitor_broken
     - title: My Issue Is Not Listed
-      payload: /issue_not_listed
+      payload: It is not listed
   utter_keyboard_options:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: Broken Keyboard
       payload: /problem_keyboard_broken
     - title: My Issue Is Not Listed
-      payload: /issue_not_listed
+      payload: It is not listed
   utter_printer_options:
   - text: Please select the issue you are having from the list below.
     buttons:
@@ -159,39 +161,39 @@ templates:
     - title: Printer Missing
       payload: /problem_printer_missing
     - title: My Issue Is Not Listed
-      payload: /issue_not_listed
+      payload: It is not listed
   utter_monitor_flicker:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/flickeringresolution. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_printer_slow:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/myprinterisslow. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_printer_error:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/printererror. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_printer_missing:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/printermissing. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_buttons:
   - text: Options
   utter_generic_broken:
@@ -200,44 +202,44 @@ templates:
       analyst? If you select no I cannot offer any further assistance.
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_further_help:
   - text: It appears I was unable to figure out your issue. Would you like me to create
       a ticket for you so that your problem can be resolved by one of my human colleagues?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_further_help_sw:
   - text: It appears I was unable to figure out which software you require. Would
       you like me to create a ticket for you so that one of my human colleagues can
       assist you?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_further_help_hw:
   - text: It appears I was unable to figure out which hardware you require. Would
       you like me to create a ticket for you so that one of my human colleagues can
       assist you?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_issue_not_found:
   - text: It appears that your issue is not listed. Would you like me to create a
       ticket for you so that your problem can be resolved by one of my colleagues.
       Creating a ticket will also ensure that your issue gets added in the future.
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_goodbye:
   - text: Hopefully I was able to resolve your issue or create a ticket for you! Thank
       you for coming to Riley's bot shop! Please greet me to start this conversation
@@ -250,9 +252,9 @@ templates:
       you like to add an analyst to this chat?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_call_it:
   - text: A ticket will not be created. If you would like to speak to IT support directly,
       please call 555-555-5555. Please greet me if you would like to start this conversation
@@ -268,9 +270,9 @@ templates:
   - text: It appears that you are having a vpn issue. Is this correct?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_vpn_options:
   - text: Please select the issue you are having from the list below.
     buttons:
@@ -283,46 +285,46 @@ templates:
       at http://ourkb.com/vpnconnection. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_vpn_entrust:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/vpnentrust. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_mykey_question:
   - text: It appears that you are having a mykey issue. Is this correct?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_mykey_options:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: General MyKey (All)
       payload: /problem_mykey_general
     - title: My Issue Is Not Listed
-      payload: /issue_not_listed
+      payload: It is not listed
   utter_mykey_general:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/mykeygeneral. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_outlook_question:
   - text: It appears that you are having a outlook issue. Is this correct?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_outlook_options:
   - text: Please select the issue you are having from the list below.
     buttons:
@@ -330,31 +332,41 @@ templates:
       payload: /problem_outlook_wopen
     - title: Outlook Password Prompt
       payload: /problem_outlook_password
+    - title: Emails will not send
+      payload: /problem_outlook_send
     - title: My Issue Is Not Listed
-      payload: /issue_not_listed
+      payload: It is not listed
   utter_outlook_wopen:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/outlookwopen. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_outlook_password:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/outlookpassword. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
+  utter_outlook_send:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
+      at http://ourkb.com/outlooksend. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: Yes
+    - title: No
+      payload: /utter_generic_deny
   utter_phone_question:
   - text: It appears that you are having a phone issue. Is this correct?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_phone_options:
   - text: Please select the issue you are having from the list below.
     buttons:
@@ -363,44 +375,44 @@ templates:
     - title: Phone Broken
       payload: /problem_phone_broken
     - title: My Issue Is Not Listed
-      payload: /issue_not_listed
+      payload: It is not listed
   utter_phone_password:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/phonepassword. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_phone_broken:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/phonebroken. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_mouse_question:
   - text: It appears that you are having a mouse issue. Is this correct?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_mouse_options:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: Broken Mouse
       payload: /problem_mouse_broken
     - title: My Issue Is Not Listed
-      payload: /issue_not_listed
+      payload: It is not listed
   utter_sound_question:
   - text: It appears that you are having a sound issue. Is this correct?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_sound_options:
   - text: Please select the issue you are having from the list below.
     buttons:
@@ -409,192 +421,192 @@ templates:
     - title: Speaker/Sound Bar Not Working
       payload: /problem_sound_hw
     - title: My Issue Is Not Listed
-      payload: /issue_not_listed
+      payload: It is not listed
   utter_sound_nwork:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/soundnwork. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_sound_hw:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/soundhw. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_word_question:
   - text: It appears that you are having a word issue. Is this correct?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_word_options:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: General Word Issues
       payload: /problem_word_generalerrors
     - title: My Issue Is Not Listed
-      payload: /issue_not_listed
+      payload: It is not listed
   utter_word_generalerrors:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/wordgeneralerrors. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_powerpoint_question:
   - text: It appears that you are having a powerpoint issue. Is this correct?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_powerpoint_options:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: General Powerpoint Issues
       payload: /problem_powerpoint_generalerrors
     - title: My Issue Is Not Listed
-      payload: /issue_not_listed
+      payload: It is not listed
   utter_powerpoint_generalerrors:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/powerpointgeneralerrors. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_excel_question:
   - text: It appears that you are having an excel issue. Is this correct?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_excel_options:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: General Excel Issues
       payload: /problem_excel_generalissues
     - title: My Issue Is Not Listed
-      payload: /issue_not_listed
+      payload: It is not listed
   utter_excel_generalissues:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/excelgeneralissues. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_aacrobat_question:
   - text: It appears that you are having a Adobe Acrobat issue. Is this correct?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_aacrobat_options:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: Adobe Acrobat General Issues
       payload: /problem_aacrobat_generalissues
     - title: My Issue Is Not Listed
-      payload: /issue_not_listed
+      payload: It is not listed
   utter_aacrobat_generalissues:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/aacrobatgeneralissues. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_skype_question:
   - text: It appears that you are having a skype issue. Is this correct?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_skype_options:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: Cannot Login
       payload: /problem_skype_login
     - title: My Issue Is Not Listed
-      payload: /issue_not_listed
+      payload: It is not listed
   utter_skype_login:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/skypelogin. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_skype_msgs:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/skypemsgs. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_sas_question:
   - text: It appears that you are having a SAS issue. Is this correct?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_sas_options:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: SAS General Issues (All)
       payload: /problem_sas_general
     - title: My Issue Is Not Listed
-      payload: /issue_not_listed
+      payload: It is not listed
   utter_sas_general:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/sasgeneral. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_slack_question:
   - text: It appears that you are having a slack issue. Is this correct?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_slack_options:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: Slack General Issues (All)
       payload: /problem_slack_general
     - title: My Issue Is Not Listed
-      payload: /issue_not_listed
+      payload: It is not listed
   utter_slack_general:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/slackgeneral. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_drives_question:
   - text: It appears that you are having a Network Drive/File issue. Is this correct?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_drives_options:
   - text: Please select the issue you are having from the list below.
     buttons:
@@ -603,52 +615,52 @@ templates:
     - title: File Recovery
       payload: /problem_drives_files
     - title: My Issue Is Not Listed
-      payload: /issue_not_listed
+      payload: It is not listed
   utter_drives_connect:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/drivesconnect. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_drives_files:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/drivesfiles. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_jabber_question:
   - text: It appears that you are having a Jabber issue. Is this correct?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_jabber_options:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: Jabber Error
       payload: /problem_jabber_error
     - title: My Issue Is Not Listed
-      payload: /issue_not_listed
+      payload: It is not listed
   utter_jabber_error:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/jabbererror. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_browser_question:
   - text: It appears that you are having a browser issue. Is this correct?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_browser_options:
   - text: Please select the issue you are having from the list below.
     buttons:
@@ -663,111 +675,118 @@ templates:
     - title: Internet Explorer
       payload: /problem_browser_ie
     - title: My Issue Is Not Listed
-      payload: /issue_not_listed
+      payload: It is not listed
   utter_browser_general:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/browsergeneral. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_browser_edge:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/browseredge. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_browser_firefox:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/browserfirefox. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_browser_ie:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/browserie. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_browser_chrome:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/browserchrome. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_cam_question:
   - text: It appears that you are having a camera issue. Is this correct?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_cam_options:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: Webcam Broken
       payload: /problem_cam_broken
     - title: My Issue Is Not Listed
-      payload: /issue_not_listed
+      payload: It is not listed
   utter_cam_broken:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/cambroken. Did this resolve your issue?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_sw_adobeacrobat_question:
   - text: It appears you are requesting Adobe Acrobat. Is this correct?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_sw_slack_question:
   - text: It appears you are requesting slack. Is this correct?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_hw_keyboard_question:
   - text: It appears you are requesting a keyboard. Is this correct?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_sw_visio_question:
   - text: It appears you are requesting visio. Is this correct?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_hw_laptop_question:
   - text: It appears you are requesting a laptop. Is this correct?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
   utter_hw_desktop_question:
   - text: It appears you are requesting a desktop. Is this correct?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny
+      payload: No
+  utter_sw_chrome_question:
+  - text: It appears you are requesting chrome. Is this correct?
+    buttons:
+    - title: Yes
+      payload: Yes
+    - title: No
+      payload: No
 actions:
 - utter_greet
 - utter_generic_issue
@@ -866,3 +885,5 @@ actions:
 - utter_sw_visio_question
 - utter_hw_laptop_question
 - utter_hw_desktop_question
+- utter_outlook_send
+- utter_sw_chrome_question

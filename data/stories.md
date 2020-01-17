@@ -1799,3 +1799,39 @@
 * req_desktop
  - utter_hw_desktop_question 
  > hwreq_asked
+
+## issue+outlook+send
+> specific_outlook_issue
+* problem_outlook_send
+ - utter_outlook_send
+ > outlook_send_fixed_q
+
+## issue+outlook+send+fixed
+> outlook_send_fixed_q
+* affirm
+ - utter_goodbye
+ - action_restart
+
+## issue+outlook+send+notfixed
+> outlook_send_fixed_q
+* deny
+ - utter_ticket_reply
+ > outlook_send_not_fixed
+
+## issue+outlook+send+notfixed+affirmanalyst
+> outlook_send_not_fixed
+* affirm
+ - utter_analyst_reply
+ - action_restart
+
+## issue+outlook+send+notfixed+denyanalyst
+> outlook_send_not_fixed
+* deny
+ - utter_goodbye
+ - action_restart
+
+## swreq+chrome
+> software_asked
+* req_chrome
+ - utter_sw_chrome_question 
+ > swreq_asked_app
