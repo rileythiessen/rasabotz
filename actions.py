@@ -35,6 +35,7 @@ class ActionSetIntents(Action):
 		intent_current = tracker.latest_message['intent'].get('name')
 		return[SlotSet("intents",intent_current)]
 
+
 # class ActionSaveIntent(Action):
 
 # 	def name(self) -> Text:

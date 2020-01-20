@@ -42,7 +42,7 @@ intents:
 - problem_powerpoint
 - problem_powerpoint_generalerrors
 - problem_excel
-- problem_excel_generalissues
+- problem_excel_generalerrors
 - problem_aacrobat
 - problem_aacrobat_generalissues
 - problem_skype
@@ -76,44 +76,54 @@ intents:
 - req_chrome
 - more_info
 - req_monitor
+- problem_wifi
+- problem_wifi_connection
+- problem_agridoc
+- problem_agridoc_errors
+- problem_agridoc_slow
+- req_firefox
+- req_adobephotoshop
+- req_mouse
 templates:
   utter_greet:
-  - text: Hi I am Agrit, I am the Agriculture and Agri-Food Canada IT Bot. How can
-      I help you today?
+  - text: Hi I am Agrit. I am a chatbot that can help you with basic IT problem solving
+      and software/hardware requests. To get started, please select one of the options
+      below.
     buttons:
-    - title: I am having an issue
-      payload: I am having an issue
-    - title: Request for new hardware
-      payload: Request for new hardware
-    - title: Request for new software
-      payload: Request for new software
-    - title: I am confused (More info)
+    - title: What can Agrit do?
       payload: I need more info
+    - title: I am having an issue/problem
+      payload: I am having an issue
+    - title: I want to request new hardware
+      payload: Request for new hardware
+    - title: I want to request new software
+      payload: Request for new software
   utter_default:
-  - text: Hi I am Agrit, I am the Agriculture and Agri-Food Canada IT Bot. How can
-      I help you today?
+  - text: Hi I am Agrit. I am a chatbot that can help you with basic IT problem solving
+      and software/hardware requests. To get started, please select one of the options
+      below.
     buttons:
-    - title: I am having an issue
-      payload: I am having an issue
-    - title: Request for new hardware
-      payload: Request for new hardware
-    - title: Request for new software
-      payload: Request for new software
-    - title: I am confused (More info)
+    - title: What can Agrit do?
       payload: I need more info
+    - title: I am having an issue/problem
+      payload: I am having an issue
+    - title: I want to request new hardware
+      payload: Request for new hardware
+    - title: I want to request new software
+      payload: Request for new software
   utter_more_info:
-  - text: "Hi I am Agrit, I am a bot designed to help the clients of Agriculture and\
-      \ Agri-Food Canada. Currently I am here to help you if you are having any problems,\
+  - text: "Hi I am Agrit, I am a chatbot designed to help you with basic IT problem solving\
+      \ and software/hardware requests. Currently I am here to help you if you are having any problems,\
       \ or if you require any software or hardware. To help you select from the options\
       \ below let me give you a little bit of information about each. \n**I am having\
-      \ an issue** is the button you should be selecting if you are having any problems\
-      \ at all. It does not matter if you problem is related to your hardware (for\
-      \ example your keyboard is physically broken) or your software (adobe acrobat\
-      \ is givving you errors with pdfs).\n**Requesting new hardware** is for when\
-      \ you need something new such as an ergonomic keyboard or mouse.\n**Requesting\
-      \ new software** is for when you need additional software that you don't currently\
-      \ have. You should not be clicking this button if your adobe acrobat is slow\
-      \ when reading your pdf files as that would be an issue."
+      \ an issue/problem** is the button to select if you are having\
+      \ any problems at all. It does not matter if your problem is related to your\
+      \ hardware (for example your keyboard is physically broken) or your software\
+      \ (adobe acrobat is giving you errors with pdfs).\n**I want to request new hardware**\
+      \ is for when you need something new such as an ergonomic keyboard or mouse.\n\
+      **I want to request new hardware** is for when you need additional software\
+      \ that you don't currently have. You should not be clicking this button if your\
+      \ adobe acrobat is slow when reading your pdf files as that would be an issue."
     buttons:
     - title: I am having an issue
       payload: I am having an issue
@@ -175,27 +185,27 @@ templates:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: Flickering Issues
-      payload: /problem_monitor_flicker
+      payload: 1. My monitor is flickering
     - title: Broken Monitor
-      payload: /problem_monitor_broken
+      payload: 2. My monitor is broken
     - title: My Issue Is Not Listed
       payload: It is not listed
   utter_keyboard_options:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: Broken Keyboard
-      payload: /problem_keyboard_broken
+      payload: 1. My keyboard is broken
     - title: My Issue Is Not Listed
       payload: It is not listed
   utter_printer_options:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: Slow Printer
-      payload: /problem_printer_slow
+      payload: 1. My printer is slow
     - title: Printer Error
-      payload: /problem_printer_error
+      payload: 2. Printer error
     - title: Printer Missing
-      payload: /problem_printer_missing
+      payload: 3. Printer missing
     - title: My Issue Is Not Listed
       payload: It is not listed
   utter_monitor_flicker:
@@ -313,9 +323,11 @@ templates:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: VPN General
-      payload: /problem_vpn_connection
+      payload: 1. VPN connection issues
     - title: Entrust
-      payload: /problem_vpn_entrust
+      payload: 2. Entrust issues
+    - title: My Issue Is Not Listed
+      payload: It is not listed
   utter_vpn_connection:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/vpnconnection. Did this resolve your issue?
@@ -343,7 +355,7 @@ templates:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: General MyKey (All)
-      payload: /problem_mykey_general
+      payload: 1. General MyKey Issues
     - title: My Issue Is Not Listed
       payload: It is not listed
   utter_mykey_general:
@@ -365,11 +377,11 @@ templates:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: Outlook Won't Open
-      payload: /problem_outlook_wopen
+      payload: 1. Outlook will not open
     - title: Outlook Password Prompt
-      payload: /problem_outlook_password
-    - title: Emails will not send
-      payload: /problem_outlook_send
+      payload: 2. Outlook password prompt
+    - title: Cannot send/receive emails
+      payload: 3. Emails wont send/receive
     - title: My Issue Is Not Listed
       payload: It is not listed
   utter_outlook_wopen:
@@ -395,7 +407,7 @@ templates:
     - title: Yes
       payload: Yes
     - title: No
-      payload: /utter_generic_deny
+      payload: No
   utter_phone_question:
   - text: It appears that you are having a phone issue. Is this correct?
     buttons:
@@ -407,9 +419,9 @@ templates:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: Phone Password
-      payload: /problem_phone_password
+      payload: 1. Phone password reset
     - title: Phone Broken
-      payload: /problem_phone_broken
+      payload: 2. Phone is broken
     - title: My Issue Is Not Listed
       payload: It is not listed
   utter_phone_password:
@@ -439,7 +451,7 @@ templates:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: Broken Mouse
-      payload: /problem_mouse_broken
+      payload: 1. Mouse is broken
     - title: My Issue Is Not Listed
       payload: It is not listed
   utter_sound_question:
@@ -453,9 +465,9 @@ templates:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: Sound Not Working
-      payload: /problem_sound_nwork
+      payload: 1. Sound not working
     - title: Speaker/Sound Bar Not Working
-      payload: /problem_sound_hw
+      payload: 2. Sound device not working
     - title: My Issue Is Not Listed
       payload: It is not listed
   utter_sound_nwork:
@@ -485,7 +497,7 @@ templates:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: General Word Issues
-      payload: /problem_word_generalerrors
+      payload: 1. Word general issues
     - title: My Issue Is Not Listed
       payload: It is not listed
   utter_word_generalerrors:
@@ -507,7 +519,7 @@ templates:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: General Powerpoint Issues
-      payload: /problem_powerpoint_generalerrors
+      payload: 1. Powerpoint general issues
     - title: My Issue Is Not Listed
       payload: It is not listed
   utter_powerpoint_generalerrors:
@@ -529,10 +541,10 @@ templates:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: General Excel Issues
-      payload: /problem_excel_generalissues
+      payload: 1. Excel general issues
     - title: My Issue Is Not Listed
       payload: It is not listed
-  utter_excel_generalissues:
+  utter_excel_generalerrors:
   - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
       at http://ourkb.com/excelgeneralissues. Did this resolve your issue?
     buttons:
@@ -541,7 +553,7 @@ templates:
     - title: No
       payload: No
   utter_aacrobat_question:
-  - text: It appears that you are having a Adobe Acrobat issue. Is this correct?
+  - text: It appears that you are having a Adobe Acrobat / PDF issue. Is this correct?
     buttons:
     - title: Yes
       payload: Yes
@@ -551,7 +563,7 @@ templates:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: Adobe Acrobat General Issues
-      payload: /problem_aacrobat_generalissues
+      payload: 1. Adobe Acrobat general issues
     - title: My Issue Is Not Listed
       payload: It is not listed
   utter_aacrobat_generalissues:
@@ -573,7 +585,9 @@ templates:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: Cannot Login
-      payload: /problem_skype_login
+      payload: 1. Cant login to skype
+    - title: Skype Message problems
+      payload: 2. Skype message problems
     - title: My Issue Is Not Listed
       payload: It is not listed
   utter_skype_login:
@@ -603,7 +617,7 @@ templates:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: SAS General Issues (All)
-      payload: /problem_sas_general
+      payload: 1. SAS general issues
     - title: My Issue Is Not Listed
       payload: It is not listed
   utter_sas_general:
@@ -625,7 +639,7 @@ templates:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: Slack General Issues (All)
-      payload: /problem_slack_general
+      payload: 1. General slack issues
     - title: My Issue Is Not Listed
       payload: It is not listed
   utter_slack_general:
@@ -646,10 +660,10 @@ templates:
   utter_drives_options:
   - text: Please select the issue you are having from the list below.
     buttons:
-    - title: Network Drive Issue
-      payload: /problem_drives_connect
+    - title: Network Drive(s) Missing
+      payload: 1. Drive missing
     - title: File Recovery
-      payload: /problem_drives_files
+      payload: 2. File recovery
     - title: My Issue Is Not Listed
       payload: It is not listed
   utter_drives_connect:
@@ -679,7 +693,7 @@ templates:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: Jabber Error
-      payload: /problem_jabber_error
+      payload: 1. Jabber error
     - title: My Issue Is Not Listed
       payload: It is not listed
   utter_jabber_error:
@@ -691,7 +705,8 @@ templates:
     - title: No
       payload: No
   utter_browser_question:
-  - text: It appears that you are having a browser issue. Is this correct?
+  - text: It appears that you are having an issue related to a browser (firefox,ie,chrome,edge).
+      Is this correct?
     buttons:
     - title: Yes
       payload: Yes
@@ -701,15 +716,15 @@ templates:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: General Browser Issues
-      payload: /problem_browser_general
+      payload: 1. General browser issues
     - title: Firefox
-      payload: /problem_browser_firefox
+      payload: 2. Firefox issue
     - title: Chrome
-      payload: /problem_browser_chrome
+      payload: 3. Chrome issue
     - title: Edge
-      payload: /problem_browser_edge
+      payload: 4. Edge issue
     - title: Internet Explorer
-      payload: /problem_browser_ie
+      payload: 5. IE issue
     - title: My Issue Is Not Listed
       payload: It is not listed
   utter_browser_general:
@@ -763,7 +778,7 @@ templates:
   - text: Please select the issue you are having from the list below.
     buttons:
     - title: Webcam Broken
-      payload: /problem_cam_broken
+      payload: 1. Broken webcam
     - title: My Issue Is Not Listed
       payload: It is not listed
   utter_cam_broken:
@@ -827,9 +842,84 @@ templates:
   - text: It appears you are requesting a monitor. Is this correct?
     buttons:
     - title: Yes
-      payload: /affirm
+      payload: Yes
     - title: No
-      payload: /deny  
+      payload: No
+  utter_wifi_question:
+  - text: It appears that you are having a wifi issue. Is this correct?
+    buttons:
+    - title: Yes
+      payload: Yes
+    - title: No
+      payload: No
+  utter_wifi_options:
+  - text: Please select the issue you are having from the list below.
+    buttons:
+    - title: Wifi Connection (General wifi issues)
+      payload: 1. Wifi connection
+    - title: My Issue Is Not Listed
+      payload: It is not listed
+  utter_wifi_connection:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
+      at http://ourkb.com/wificonnection. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: Yes
+    - title: No
+      payload: No
+  utter_agridoc_question:
+  - text: It appears that you are having a Agridoc issue. Is this correct?
+    buttons:
+    - title: Yes
+      payload: Yes
+    - title: No
+      payload: No
+  utter_agridoc_options:
+  - text: Please select the issue you are having from the list below.
+    buttons:
+    - title: Agridoc Errors
+      payload: 1. Agridoc errors
+    - title: Agridoc Is Slow
+      payload: 2. Agridoc is slow
+    - title: My Issue Is Not Listed
+      payload: It is not listed
+  utter_agridoc_errors:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
+      at http://ourkb.com/agridocerrors. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: Yes
+    - title: No
+      payload: No
+  utter_agridoc_slow:
+  - text: I'm sorry to hear you're experiencing this issue. Resolutions can be found
+      at http://ourkb.com/agridocslow. Did this resolve your issue?
+    buttons:
+    - title: Yes
+      payload: Yes
+    - title: No
+      payload: No
+  utter_sw_firefox_question:
+  - text: It appears you are requesting Mozilla Firefox. Is this correct?
+    buttons:
+    - title: Yes
+      payload: Yes
+    - title: No
+      payload: No
+  utter_sw_adobephotoshop_question:
+  - text: It appears you are requesting Adobe Photoshop. Is this correct?
+    buttons:
+    - title: Yes
+      payload: Yes
+    - title: No
+      payload: No
+  utter_hw_mouse_question:
+  - text: It appears you are requesting a mouse. Is this correct?
+    buttons:
+    - title: Yes
+      payload: Yes
+    - title: No
+      payload: No
 actions:
 - utter_greet
 - utter_generic_issue
@@ -891,7 +981,7 @@ actions:
 - utter_powerpoint_generalerrors
 - utter_excel_question
 - utter_excel_options
-- utter_excel_generalissues
+- utter_excel_generalerrors
 - utter_aacrobat_question
 - utter_aacrobat_options
 - utter_aacrobat_generalissues
@@ -932,3 +1022,13 @@ actions:
 - utter_sw_chrome_question
 - utter_more_info
 - utter_hw_monitor_question
+- utter_wifi_question
+- utter_wifi_options
+- utter_wifi_connection
+- utter_agridoc_question
+- utter_agridoc_options
+- utter_agridoc_errors
+- utter_agridoc_slow
+- utter_sw_adobephotoshop_question
+- utter_sw_firefox_question
+- utter_hw_mouse_question

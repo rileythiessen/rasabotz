@@ -984,30 +984,30 @@
 
 ## issue+excel+generalissues
 > specific_excel_issue
-* problem_excel_generalissues
- - utter_excel_generalissues
- > excel_generalissues_fixed_q
+* problem_excel_generalerrors
+ - utter_excel_generalerrors
+ > excel_generalerrors_fixed_q
 
 ## issue+excel+generalissues+fixed
-> excel_generalissues_fixed_q
+> excel_generalerrors_fixed_q
 * affirm
  - utter_goodbye
  - action_restart
 
 ## issue+excel+generalissues+notfixed
-> excel_generalissues_fixed_q
+> excel_generalerrors_fixed_q
 * deny
  - utter_ticket_reply
- > excel_generalissues_not_fixed
+ > excel_generalerrors_not_fixed
 
 ## issue+excel+generalissues+notfixed+affirmanalyst
-> excel_generalissues_not_fixed
+> excel_generalerrors_not_fixed
 * affirm
  - utter_analyst_reply
  - action_restart
 
 ## issue+excel+generalissues+notfixed+denyanalyst
-> excel_generalissues_not_fixed
+> excel_generalerrors_not_fixed
 * deny
  - utter_goodbye
  - action_restart
@@ -1871,4 +1871,194 @@
 > hardware_asked
 * req_monitor
  - utter_hw_monitor_question 
+ > hwreq_asked
+
+## issue+wifi
+> issue_asked
+* problem_wifi
+ - utter_wifi_question 
+ > wifi_issue_asked
+
+## issue+wifi+deny
+> wifi_issue_asked
+* deny
+ - utter_further_help
+ > wifi_issue_ticket
+
+## issue+wifi+deny+affirm
+> wifi_issue_ticket
+* affirm
+ - utter_ticket_created_reply
+ - action_restart
+
+## issue+wifi+deny+deny
+> wifi_issue_ticket
+* deny
+ - utter_call_it
+ - action_restart
+
+## issue+wifi+affirm
+> wifi_issue_asked
+* affirm
+ - utter_generic_apology
+ - utter_wifi_options
+ > specific_wifi_issue
+
+## issue+wifi+affirm+other
+> specific_wifi_issue
+* issue_not_listed
+ - utter_issue_not_found
+ > other_ticket
+
+
+
+
+
+## issue+wifi+connection
+> specific_wifi_issue
+* problem_wifi_connection
+ - utter_wifi_connection
+ > wifi_connection_fixed_q
+
+## issue+wifi+connection+fixed
+> wifi_connection_fixed_q
+* affirm
+ - utter_goodbye
+ - action_restart
+
+## issue+wifi+connection+notfixed
+> wifi_connection_fixed_q
+* deny
+ - utter_ticket_reply
+ > wifi_connection_not_fixed
+
+## issue+wifi+connection+notfixed+affirmanalyst
+> wifi_connection_not_fixed
+* affirm
+ - utter_analyst_reply
+ - action_restart
+
+## issue+wifi+connection+notfixed+denyanalyst
+> wifi_connection_not_fixed
+* deny
+ - utter_goodbye
+ - action_restart
+
+## issue+agridoc
+> issue_asked
+* problem_agridoc
+ - utter_agridoc_question 
+ > agridoc_issue_asked
+
+## issue+agridoc+deny
+> agridoc_issue_asked
+* deny
+ - utter_further_help
+ > agridoc_issue_ticket
+
+## issue+agridoc+deny+affirm
+> agridoc_issue_ticket
+* affirm
+ - utter_ticket_created_reply
+ - action_restart
+
+## issue+agridoc+deny+deny
+> agridoc_issue_ticket
+* deny
+ - utter_call_it
+ - action_restart
+
+## issue+agridoc+affirm
+> agridoc_issue_asked
+* affirm
+ - utter_generic_apology
+ - utter_agridoc_options
+ > specific_agridoc_issue
+
+## issue+agridoc+affirm+other
+> specific_agridoc_issue
+* issue_not_listed
+ - utter_issue_not_found
+ > other_ticket
+
+
+
+
+
+## issue+agridoc+errors
+> specific_agridoc_issue
+* problem_agridoc_errors
+ - utter_agridoc_errors
+ > agridoc_errors_fixed_q
+
+## issue+agridoc+errors+fixed
+> agridoc_errors_fixed_q
+* affirm
+ - utter_goodbye
+ - action_restart
+
+## issue+agridoc+errors+notfixed
+> agridoc_errors_fixed_q
+* deny
+ - utter_ticket_reply
+ > agridoc_errors_not_fixed
+
+## issue+agridoc+errors+notfixed+affirmanalyst
+> agridoc_errors_not_fixed
+* affirm
+ - utter_analyst_reply
+ - action_restart
+
+## issue+agridoc+errors+notfixed+denyanalyst
+> agridoc_errors_not_fixed
+* deny
+ - utter_goodbye
+ - action_restart
+
+## issue+agridoc+slow
+> specific_agridoc_issue
+* problem_agridoc_slow
+ - utter_agridoc_slow
+ > agridoc_slow_fixed_q
+
+## issue+agridoc+slow+fixed
+> agridoc_slow_fixed_q
+* affirm
+ - utter_goodbye
+ - action_restart
+
+## issue+agridoc+slow+notfixed
+> agridoc_slow_fixed_q
+* deny
+ - utter_ticket_reply
+ > agridoc_slow_not_fixed
+
+## issue+agridoc+slow+notfixed+affirmanalyst
+> agridoc_slow_not_fixed
+* affirm
+ - utter_analyst_reply
+ - action_restart
+
+## issue+agridoc+slow+notfixed+denyanalyst
+> agridoc_slow_not_fixed
+* deny
+ - utter_goodbye
+ - action_restart
+
+## swreq+firefox
+> software_asked
+* req_firefox
+ - utter_sw_firefox_question 
+ > swreq_asked
+
+## swreq+adobephotoshop
+> software_asked
+* req_adobephotoshop
+ - utter_sw_adobephotoshop_question 
+ > swreq_asked_app
+
+## hwreq+mouse
+> hardware_asked
+* req_mouse
+ - utter_hw_mouse_question 
  > hwreq_asked

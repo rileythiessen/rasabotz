@@ -13,6 +13,13 @@
 - hola
 - Hello
 - Howdy
+- happy day
+- good day
+- good afternoon
+- hello sir
+- Hi there Agrit
+- Hello Agrit
+- Good day to you Agrit
 
 ## intent:req_monitor
 - I need a second monitor
@@ -80,6 +87,19 @@
 - I need a new keyboard
 - I want a new keyboard
 
+## intent:problem_mykey
+- Issues with mykey
+- My mykey wont work
+- How do I get mykey
+- My mykey isnt functioning
+- mykey not working properly
+- my key not working properly
+- mykey wont login
+- cant login with mykey
+
+## intent:problem_mykey_general
+- 1. General MyKey Issues
+
 ## intent:problem_monitor
 - I need help with my monitor
 - My monitor will not turn on
@@ -114,6 +134,15 @@
 - Flickering issues with my monitor...
 - My monitor colour issues are not normal
 
+## intent:problem_monitor_flicker
+- 1. My monitor is flickering
+
+## intent:problem_keyboard_broken
+- 1. My keyboard is broken
+
+## intent:problem_monitor_broken
+- 2. My monitor is broken
+
 ## intent:problem_mouse
 - I need help with my mouse
 - There is an issue with my mouse
@@ -133,6 +162,9 @@
 - My mouse doesn't work please help
 - For whatever reason, my mouse is not working
 - My mouse fell off my desk and is broken
+
+## intent:problem_mouse_broken
+- 1. Mouse is broken
 
 ## intent:problem_keyboard
 - I need help with my keyboard
@@ -177,10 +209,32 @@
 - my desktop mic isnt working
 - my mic isnt working
 - my micro isnt working
-- my microphone isnt working
 - my audio wont work
 - my audio isnt working
 - there is no audio on my laptop
+- there is no audio on my pc
+- no audio on computer
+- no audio on desktop
+- audio issue with pc
+- Sound is not working
+- Sound not working
+- Sound Broken
+- Broken sound
+- Speaker is broken
+- Soundbar is broken
+- i cant hear anything coming out of my speaker
+- i cant hear anything from my laptop
+- cant hear anything
+- i am having a sound issue\
+- my sound is not working
+- my audio is not working right
+- sound device not working
+
+## intent:problem_sound_nwork
+- 1. Sound not working
+
+## intent:problem_sound_hw
+- 2. Sound device not working
 
 ## intent:problem_printer
 - The printer is not working.
@@ -192,6 +246,25 @@
 - I get an error on the printer
 - It takes too long to print
 - Nothing happens when I try and print
+- printer issue with pc
+- no printer showing on computer
+- cant print
+- no printers found on my computer
+- My printer is slow
+- My printer is being slow
+- Printer error
+- Printer errors
+- Printer missing
+- My printer is missing
+
+## intent:problem_printer_slow
+- 1. My printer is slow
+
+## intent:problem_printer_error
+- 2. Printer error
+
+## intent:problem_printer_missing
+- 3. Printer missing
 
 ## intent:problem_vpn
 - I'm unable to connect to the vpn.
@@ -210,6 +283,12 @@
 - my entrust app wont work
 - entrust code doesnt work
 - I am having a hard time with entrust
+
+## intent:problem_vpn_connection
+- 1. VPN connection issues
+
+## intent:problem_vpn_entrust
+- 2. Entrust issues
 
 ## intent:problem_outlook
 - I need help with my outlook
@@ -235,6 +314,13 @@
 - My outlook keeps asking for a psaasword!!
 
 ## intent:problem_outlook_send
+- 3. Emails wont send/receive
+
+## intent:problem_outlook_password
+- 2. Outlook password prompt
+
+## intent:problem_outlook_wopen
+- 1. Outlook will not open
 
 ## intent:problem_word
 - I cant access word
@@ -251,6 +337,15 @@
 - My word froze and I need to save my work
 - Word has become unclickable
 - I wish I didn’t have to use word
+
+## intent:problem_word_generalerrors
+- 1. Word general issues
+
+## intent:problem_powerpoint_generalerrors
+- 1. Powerpoint general issues
+
+## intent:problem_excel_generalerrors
+- 1. Excel general issues
 
 ## intent:problem_powerpoint
 - My powerpoint presentation wont open
@@ -307,7 +402,7 @@
 - I need new software
 
 ## intent:problem_cam_broken
-- My webcam is broken
+- 1. Broken webcam
 
 ## intent:issue_not_listed
 - It is not listed
@@ -325,6 +420,9 @@
 - Nothing happens when I click to open a pdf
 - My PDFs are opening on a webpage, I want them to open with Adobe
 - My PDF comes up in a browser, how can I get it to open in the reader
+
+## intent:problem_aacrobat_generalissues
+- 1. Adobe Acrobat general issues
 
 ## intent:problem_phone
 - My phone isn't working
@@ -361,6 +459,20 @@
 - my phone is not sending emails
 - Phone email problems
 - I am having a phone issue
+- Phone wont accept password
+- Knox not accepting password
+- Facial recognition not working
+- Phone face detect not working
+- phone iris scanner not working
+- phone fingerprint not working
+- phone wont detect fingerprint
+- cannot detect fingerprint
+
+## intent:problem_phone_password
+- 1. Phone password reset
+
+## intent:problem_phone_broken
+- 2. Phone is broken
 
 ## intent:problem_skype
 - My lync isn't working
@@ -377,6 +489,12 @@
 - Skype isn’t loading
 - Skype is offline
 
+## intent:problem_skype_login
+- 1. Cant login to skype
+
+## intent:problem_skype_msgs
+- 2. Skype message problems
+
 ## intent:problem_sas
 - my sas isnt working
 - my sas isnt functioning
@@ -387,6 +505,9 @@
 - i get an error when opening sas
 - sas isnt loading
 - sas wont load
+
+## intent:problem_sas_general
+- 1. SAS general issues
 
 ## intent:problem_slack
 - my slack isnt working
@@ -400,6 +521,9 @@
 - slack wont load
 - my slack channel is broken
 - how do i join a slack channel
+
+## intent:problem_slack_general
+- 1. General slack issues
 
 ## intent:problem_jabber
 - my jabber isnt working
@@ -426,6 +550,9 @@
 - Can you restore jabber
 - Why cant I use jabber
 
+## intent:problem_jabber_error
+- 1. Jabber error
+
 ## intent:problem_browser
 - Edge has frozen
 - Chrome has frozen
@@ -451,6 +578,90 @@
 - My toolbar disappeared in edge
 - My toolbar disappeared in internet explorer
 - My firewall is blocking a website
+
+## intent:problem_browser_general
+- 1. General browser issues
+
+## intent:problem_browser_firefox
+- 2. Firefox issue
+
+## intent:problem_browser_chrome
+- 3. Chrome issue
+
+## intent:problem_browser_edge
+- 4. Edge issue
+
+## intent:problem_browser_ie
+- 5. IE issue
+
+## intent:problem_wifi
+- I cant connect to wifi
+- having a hard time connecting to wifi
+- wifi wont work
+- wifi is greyed out
+- my wifi isnt working
+- my wifi isnt connecting
+- why cant i connect to the wifi
+- wireless internet not working
+- i cant connect to the internet
+- why cant i connect to internet
+- issues connecting to internet
+- slow internet connection
+- internet being slow
+- wifi being slow
+
+## intent:problem_wifi_connection
+- 1. Wifi connection
+
+## intent:problem_agridoc
+- My agridoc isnt working
+- Agridoc is slow
+- How do I get agridoc installed
+- Agridoc is broken
+- Agridoc is giving me an error
+- my agridoc is giving me errors
+- agridoc isnt working properly
+- agridoc problems
+- agri doc issues
+- agridoc is being very slow today
+- why is my agridoc being so slow
+
+## intent:problem_agridoc_errors
+- 1. Agridoc errors
+
+## intent:problem_agridoc_slow
+- 2. Agridoc is slow
+
+## intent:req_firefox
+- I would like firefox
+- I want firefox
+- Can I please have fire fox
+- May I please get fire fox
+- I require firefox to complete my work, chrome isnt working
+- I need firefox to access certain pages
+- I would like to acquire firefox
+
+## intent:req_adobephotoshop
+- I would like photoshop
+- I would like adobe photoshop
+- I require adobe photoshop to do my work
+- I require photoshop to do my work
+- I need photoshop
+- I need adobe photoshop CC
+- I need that photo editing application photoshop
+- Can I please get adobe photoshop
+- Can I please get photoshop
+- I need photoshop please
+
+## intent:req_mouse
+- I would like a new mouse
+- I would like a mouse
+- I need a new mouse
+- My mouse is broken and I need a new one
+- I require a new mouse
+- I require a wireless mouse
+- I need a mouse
+- Mouse is needed
 
 ## intent:problem_cam
 - my webcam isnt working
@@ -487,6 +698,12 @@
 - I logged in to find my documents missing
 - Can you restore my files
 - Can you bring back my documents
+
+## intent:problem_drives_connect
+- 1. Drive missing
+
+## intent:problem_drives_files
+- 2. File recovery
 
 ## intent:need_analyst
 - I need an analyst
